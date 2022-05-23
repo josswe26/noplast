@@ -59,6 +59,32 @@ Visit the deployed website [here]().
 
 #### Strategy Table
 
+Opportunity / Problem | Importance | Viability / Feasibility
+--- | --- | ---
+Responsive design | 5 | 5
+Create, edit and delete products | 5 | 5
+Account registration | 5 | 5
+User profile | 5 | 5
+Wishlist | 4 | 4
+Save shipment information | 5 | 5
+Product quick view | 3 | 2
+Sort products by different criteria | 5 | 5
+Search products by name or description | 5 | 5
+Product details view | 5 | 5
+Display similar products at the a product details view | 3 | 2
+Rate products | 4 | 3
+Write product reviews | 4 | 3
+Display current purchase total | 5 | 5
+View current shopping cart | 5 | 5
+Edit quantities inside the shopping bag | 4 | 4
+Shopping cart quick view | 3 | 3
+Card payment | 5 | 5
+Additional payment options | 3 | 2
+Donations | 4 | 3
+Newsletter subscription | 5 | 5
+Bonus system | 3 | 1
+**Total** | **95** | **87**
+
 
 ### Scope
 
