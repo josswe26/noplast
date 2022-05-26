@@ -92,6 +92,61 @@ Bonus system | 3 | 1
 
 ### Scope
 
+According to the strategy table, not all features can be implemented in the first release of the project. For this reason, the project will be divided in multiple phases. The first phase will include the features that have been identified in order to build the minimum viable product.
+
+
+**First Phase**
+
+* Responsive design
+
+* Create, edit and delete products
+
+* Account registration
+
+* User profile
+
+* Save shipment information
+
+* Sort products by different criteria
+
+* Search products by name or description
+
+* Product details view
+
+* Display current purchase total
+
+* View current shopping cart
+
+* Edit quantities inside the shopping bag
+
+* Card payment
+
+* Newsletter subscription
+
+
+**Second Phase**
+
+* Wishlist
+
+* Rate products
+
+* Write product reviews
+
+* Donations
+
+
+**Third Phase**
+
+* Product quick view
+
+* Display similar products at the a product details view
+
+* Shopping cart quick view
+
+* Additional payment options
+
+* Bonus system
+
 
 #### User Stories
 
