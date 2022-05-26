@@ -4,7 +4,11 @@
 ![NoPlast mockup images]()
 
 
-No Plast.
+NoPlast is an ecommerce website offering a variety of plastic-free products. 
+
+The main purpose of the website is to provide site users with eco-friendly alternatives to single-use plastic products that are bad for the environment. 
+
+Another goal the website wants to achieve is to create consciousness about plastic pollution and in this way reduce plastic waste. Site users are also given the option to support charities that are fighting to protect our world's oceans from plastic pollution by making a donation. 
 
 Visit the deployed website [here]().
 
