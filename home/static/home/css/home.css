@@ -1,15 +1,35 @@
 /* Categories section */
-.categories-section {
+#categories-section {
     background: url("/media/categories-bg.jpg") no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
 }
 
-.categories-section img {
+#categories-section img {
     width: 450px; /* Avoid some images becoming to wide */
 }
 
-.categories-section i {
+#categories-section i {
     font-size: 3rem;
     color: #001f3d;
+}
+
+/*Guide section */
+
+#guide-section {
+    background-color: #001f3d;
+    color: #f4f6fc;
+}
+
+.guide-item-container {
+    text-align: center;
+}
+
+.guide-item-container i {
+    font-size: 10rem;
+    color: #09abd7;
+}
+
+.guide-item-container p {
+    font-size: 2rem;
 }

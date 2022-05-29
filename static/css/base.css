@@ -21,10 +21,10 @@ body {
 }
 
 /* Colors */
-.text-white {
-    color: #f4f6fc;
+.c--white {
+    color: #f4f6fc !important;
 }
 
-.bg-light-blue {
+.bg--light-blue {
     background-color: #055772;
 }
