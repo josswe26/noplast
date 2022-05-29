@@ -1,0 +1,15 @@
+/* Categories section */
+.categories-section {
+    background: url("/media/categories-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.categories-section img {
+    width: 450px; /* Avoid some images becoming to wide */
+}
+
+.categories-section i {
+    font-size: 3rem;
+    color: #001f3d;
+}

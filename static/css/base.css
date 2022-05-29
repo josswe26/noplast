@@ -1,0 +1,30 @@
+/* Change default margin, padding and border to 0 and none */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Style default body */
+body {
+    background-color: #f4f6fc;
+    color: #001f3d;
+    font-family: 'Oswald';
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* Fonts */
+.logo-text {
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+/* Colors */
+.text-white {
+    color: #f4f6fc;
+}
+
+.bg-light-blue {
+    background-color: #055772;
+}

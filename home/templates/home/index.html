@@ -1,6 +1,62 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">It works!</h1>
+
+    <!-- Categories section -->
+    <section class="categories-section m-0 d-flex align-items-center">
+        <div class="col-10 offset-1 my-2 text-uppercase">
+            <div class="row mb-4">
+                <h1 class="logo-text ps-5">Our Products</h1>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6 col-lg-4 px-5 mb-5">
+                    <a href="#" class="text-decoration-none hvr-shrink">
+                        <img class="img-fluid rounded-top" src="{{ MEDIA_URL }}household.jpeg" alt="Wellbeing image">
+                        <h4 class="bg-light-blue text-white logo-text rounded-bottom py-1">Household</h4>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 px-5 mb-5">
+                    <a href="#" class="text-decoration-none hvr-shrink">
+                        <img class="img-fluid rounded-top" src="{{ MEDIA_URL }}kitchen.jpeg" alt="Wellbeing image">
+                        <h4 class="bg-light-blue text-white logo-text rounded-bottom py-1">Kitchen</h4>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 px-5 mb-5">
+                    <a href="#" class="text-decoration-none hvr-shrink">
+                        <img class="img-fluid rounded-top" src="{{ MEDIA_URL }}storage.jpg" alt="Wellbeing image">
+                        <h4 class="bg-light-blue text-white logo-text rounded-bottom py-1">Storage</h4>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 px-5 mb-5">
+                    <a href="#" class="text-decoration-none hvr-shrink">
+                        <img class="img-fluid rounded-top" src="{{ MEDIA_URL }}wellbeing.jpg" alt="Wellbeing image">
+                        <h4 class="bg-light-blue text-white logo-text rounded-bottom py-1">Wellbeing</h4>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 px-5 mb-5">
+                    <a href="#" class="text-decoration-none hvr-shrink">
+                        <img class="img-fluid rounded-top" src="{{ MEDIA_URL }}on-the-go.jpg" alt="Wellbeing image">
+                        <h4 class="bg-light-blue text-white logo-text rounded-bottom py-1">On The Go </h4>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 px-5 mb-5">
+                    <a href="#" class="text-decoration-none hvr-shrink">
+                        <img class="img-fluid rounded-top" src="{{ MEDIA_URL }}kids-and-baby.jpeg" alt="Wellness image">
+                        <h4 class="bg-light-blue text-white logo-text rounded-bottom py-1">Kids &amp; Baby</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col">
+                    <a href="#" class="text-decoration-none hvr-sink mt-4"><i class="fas fa-chevron-down"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {% endblock %}
