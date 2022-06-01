@@ -2,11 +2,11 @@
 #categories-section {
     background: url("/media/categories-bg.jpg") no-repeat center center fixed;
     background-size: cover;
-    min-height: 100vh;
+    min-height: calc(100vh - 200px);
 }
 
 #categories-section img {
-    width: 450px; /* Avoid some images becoming to wide */
+    width: 350px; /* Avoid some images becoming to wide */
 }
 
 #categories-section i {
