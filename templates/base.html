@@ -47,13 +47,18 @@
 
 <body>
 
+  <!-- Info banner -->
+  <div id="info-banner" class="bg--light-blue">
+    <p class="text-uppercase c--white text-center my-1 mx-2">Free shipping for all orders over €30. All our deliveries are carbon neutral</p>
+  </div>
+
   <!-- Header -->
   <header class="container-fluid logo-text px-0">
     <div class="row w-100 m-0">
 
       <!-- Navigation bar -->
       <div class="col-6 col-md-4 order-2 order-md-1">
-        <nav class="navbar navbar-light navbar-expand-lg pt-4 pb-0 ps-4">
+        <nav class="navbar navbar-light navbar-expand-lg pt-4 pb-0 ps-2 ps-md-4">
           <button class="navbar-toggler m-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropup" aria-controls="navbarNavDropup" aria-expanded="false" aria-label="Toggle navigation">
             <span><i class="fas fa-bars icon"></i></span>
           </button>
@@ -79,7 +84,7 @@
 
       <!-- Search, account and shopping bag icons -->
       <div class="col-6 col-md-4 order-3">
-        <ul class="list-inline list-unstyled text-center pt-4 pb-0 pe-4 d-flex justify-content-end">
+        <ul class="list-inline list-unstyled text-center pt-4 pb-0 pe-2 pe-md-4 d-flex justify-content-end">
           <li class="list-inline-item">
             <a class="nav-link link-dark p-2" data-bs-toggle="collapse" href="#search-bar" role="button" aria-expanded="false" aria-controls="search-bar">
               <i class="fas fa-search icon"></i>
@@ -106,6 +111,7 @@
             <a href="" class="nav-link link-dark p-2">
               {% if grand_total %}
                 <i class="fas fa-shopping-cart icon"></i>
+                <p id="grand-total" class="my-0">€0.00</p>
               {% else %}
                 <i class="fas fa-cart-arrow-down icon"></i>
               {% endif %}
@@ -116,7 +122,7 @@
     </div>
 
     <!-- Search bar-->
-    <div class="row container-fluid collapse px-3 mb-4" id="search-bar">
+    <div class="row container-fluid collapse px-3 mx-0 mb-4" id="search-bar">
           <form method="GET" action="">
             <div class="input-group w-100">
               <input class="form-control border-none" type="text" name="q" placeholder="Search...">
@@ -144,19 +150,19 @@
   <!-- Footer -->
   <footer class="footer container-fluid p-5 c--white bg--light-blue mt-auto">
       <div class="row w-100 m-0">
-        <div class="col-md-4 p-4">
+        <div class="col-md-4 px-0 py-4 px-md-4">
           <h4 class="mb-3">NoPlast</h4>
           <p>Copyright &copy; 2022. All rights reserved</p>
           <a href="" class="link-light">Privacy Policy</a>
         </div>
   
-        <div class="col-md-4 p-4">
+        <div class="col-md-4 px-0 py-4 px-md-4">
           <h5 class="mb-3 text-uppercase">Social</h5>
           <p>Follow us on Facebook</p>
           <a href=""><i class="fab fa-facebook-square link-light icon"></i></a>
         </div>
   
-        <div class="col-md-4 p-4">
+        <div class="col-md-4 px-0 py-4 px-md-4">
           <h5 class="mb-3 text-uppercase">Be a friend!</h5>
           <p>Join our email list and get inspired about sustainable products and living.</p>
         </div>
