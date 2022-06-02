@@ -100,3 +100,19 @@ header {
     font-size: 1.7rem;
     color: #001f3d;
 }
+
+/* Medias queries */
+
+/* Small screens sizes and down */
+@media (max-width: 768px) {
+
+    .logo img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .nav-link {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+} 

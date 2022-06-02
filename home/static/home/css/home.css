@@ -26,10 +26,24 @@
 }
 
 .guide-item-container i {
-    font-size: 10rem;
+    font-size: 7rem;
     color: #09abd7;
 }
 
 .guide-item-container p {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
+
+/* Medias queries */
+
+/* Small screens sizes and down */
+@media (max-width: 768px) {
+
+    .guide-item-container i {
+        font-size: 5rem;
+    }
+    
+    .guide-item-container p {
+        font-size: 1.25rem;
+    }
+} 
