@@ -46,6 +46,8 @@
 </head>
 
 <body>
+
+  <!-- Header -->
   <header class="container-fluid logo-text px-0">
     <div class="row w-100 m-0">
 
@@ -55,10 +57,10 @@
           <div class="collapse navbar-collapse" id="navbarNavDropup">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" href="#">Shop</a>
+                <a class="nav-link link-dark" href="#">Shop</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link link-dark" href="#">About</a>
               </li>
             </ul>
           </div>
@@ -80,13 +82,13 @@
         <div class="container-fluid d-flex justify-content-end">
           <ul class="list-inline list-unstyled text-center mb-4 position-absolute bottom-0">
             <li class="list-inline-item">
-              <a class="nav-link p-2" data-bs-toggle="collapse" href="#search-bar" role="button" aria-expanded="false" aria-controls="search-bar">
-                <i class="fas fa-search"></i>
+              <a class="nav-link link-dark p-2" data-bs-toggle="collapse" href="#search-bar" role="button" aria-expanded="false" aria-controls="search-bar">
+                <i class="fas fa-search icon"></i>
               </a>
             </li>
             <li class="list-inline-item">
-              <a href="#" class="nav-link p-2" id="user-options" role="button" data-bs-toggle="dropdown">
-                <i class="fas fa-user"></i>
+              <a href="#" class="nav-link link-dark p-2" id="user-options" role="button" data-bs-toggle="dropdown">
+                <i class="fas fa-user icon"></i>
               </a>
               <div class="dropdown-menu border-0" aria-labelledby="user-options">
                 {% if request.user.is_authenticated %}
@@ -102,11 +104,11 @@
             </div>
             </li>
             <li class="list-inline-item">
-              <a href="" class="nav-link p-2">
+              <a href="" class="nav-link link-dark p-2">
                 {% if grand_total %}
-                  <i class="fas fa-shopping-cart"></i>
+                  <i class="fas fa-shopping-cart icon"></i>
                 {% else %}
-                  <i class="fas fa-cart-arrow-down"></i>
+                  <i class="fas fa-cart-arrow-down icon"></i>
                 {% endif %}
               </a>
             </li>
@@ -115,17 +117,18 @@
       </div>
 
     <!-- Search bar-->
-    <div class="container-fluid collapse" id="search-bar">
-      <div class="row">
-          <div class="col px-3 mb-4">
-            <form method="GET" action="">
-              <div class="input-group">
-                <input class="form-control border-none" type="text" name="q" placeholder="Search...">
-              </div>
-            </form>
-          </div>
+    <div class="row container-fluid collapse px-3 mb-4" id="search-bar">
+          <form method="GET" action="">
+            <div class="input-group w-100">
+              <input class="form-control border-none" type="text" name="q" placeholder="Search...">
+              <button class="form-control" type="submit">
+                <span class="icon">
+                    <i class="fas fa-search"></i>
+                </span>
+              </button>
+            </div>
+          </form>
         </div>
-      </div>
     </div>
   </header>
 
@@ -138,6 +141,28 @@
 
   {% block content %}
   {% endblock %}
+
+  <!-- Footer -->
+  <footer class="footer container-fluid p-5 c--white bg--light-blue mt-auto">
+      <div class="row w-100 m-0">
+        <div class="col-md-4 p-4">
+          <h4 class="mb-3">NoPlast</h4>
+          <p>Copyright &copy; 2022. All rights reserved</p>
+          <a href="" class="link-light">Privacy Policy</a>
+        </div>
+  
+        <div class="col-md-4 p-4">
+          <h5 class="mb-3 text-uppercase">Social</h5>
+          <p>Follow us on Facebook</p>
+          <a href=""><i class="fab fa-facebook-square link-light icon"></i></a>
+        </div>
+  
+        <div class="col-md-4 p-4">
+          <h5 class="mb-3 text-uppercase">Be a friend!</h5>
+          <p>Join our email list and get inspired about sustainable products and living.</p>
+        </div>
+      </div>
+  </footer>
 
   {% block postloadjs %}
   {% endblock %}

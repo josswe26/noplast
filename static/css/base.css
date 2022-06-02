@@ -7,6 +7,9 @@
 
 /* Style default body */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #f4f6fc;
     color: #001f3d;
     font-family: 'Oswald';
@@ -30,6 +33,29 @@ body {
     background-color: #055772;
 }
 
+/* Buttons, links and icons */
+
+.link-dark {
+    color: #001f3d !important;
+    text-decoration: none;
+}
+
+.link-light {
+    color: #f4f6fc;
+    text-decoration: none;
+}
+
+.link-light:hover,
+.link-light:active,
+.link-dark:hover,
+.link-dark:active {
+    color: #09abd7 !important;
+}
+
+.icon {
+    font-size: 1.7rem;
+}
+
 /* Header */
 header {
     background: url("/media/categories-bg.jpg") no-repeat center center fixed;
@@ -41,17 +67,8 @@ header {
     width: 200px;
 }
 
-.navbar-light .navbar-nav .nav-link,
 .nav-link {
-    color: #001f3d;
     font-size: 1.7rem;
-}
-
-.navbar-light .navbar-nav .nav-link:hover,
-.nav-link:hover,
-.navbar-light .navbar-nav .nav-link:focus,
-.nav-link:focus {
-    color: #09abd7;
 }
 
 .navbar-light .navbar-toggler {
@@ -67,8 +84,19 @@ header {
     color: #001f3d;
 }
 
-#search-bar input {
+#search-bar input, 
+#search-bar button {
     height: 4rem;
     font-size: 1.5rem;
-    background-color: #f4f6fc;
+}
+
+#search-bar input {
+    width: 80%;
+    border-right: none;
+}
+
+#search-bar button {
+    width: 20%;
+    font-size: 1.7rem;
+    color: #001f3d;
 }
