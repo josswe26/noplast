@@ -31,6 +31,10 @@ body {
     color: #f4f6fc !important;
 }
 
+.c--light-blue {
+    color: #055772 !important;
+}
+
 .bg--light-blue {
     background-color: #055772;
 }
