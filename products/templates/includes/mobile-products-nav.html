@@ -1,0 +1,15 @@
+<div class="d-block d-md-none dropdown ps-2">
+    <a class="dropdown-toggle link-dark" type="button" id="categories-dropdown" data-bs-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        Categories
+    </a>
+    <div class="collapse dropdown-menu" aria-labelledby="categories-dropdown">
+        <a class="dropdown-item" href="{% url 'products' %}">All Products</a>
+        <a class="dropdown-item" href="{% url 'products' %}?category=household">Household</a>
+        <a class="dropdown-item" href="{% url 'products' %}?category=kitchen">Kitchen</a>
+        <a class="dropdown-item" href="{% url 'products' %}?category=storage">Storage</a>
+        <a class="dropdown-item" href="{% url 'products' %}?category=wellbeing">Wellbeing</a>
+        <a class="dropdown-item" href="{% url 'products' %}?category=on_the_go">On The Go</a>
+        <a class="dropdown-item" href="{% url 'products' %}?category=kids_baby">Kids &amp; Baby</a>
+    </div>
+</div>

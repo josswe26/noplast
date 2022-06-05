@@ -20,35 +20,13 @@
 
 
         <!-- Categories menu  -->
-        <div class="categories-menu row border-top border-bottom py-3 logo-text">
+        <div class="categories-menu row border-top border-bottom py-3 mb-3 logo-text">
 
             <!-- Display in larger screens -->
-            <div class="d-none d-md-block text-center">
-                <a class="link-dark ps-2" href="#">Household</a>
-                <a class="link-dark ps-2" href="#">Storage</a>
-                <a class="link-dark ps-2" href="#">Wellbeing</a>
-                <a class="link-dark ps-2" href="#">Kitchen</a>
-                <a class="link-dark ps-2" href="#">On The Go</a>
-                <a class="link-dark ps-2" href="#">Kids &amp; Baby</a>
-                <a class="link-dark ps-2" href="#">All Products</a>
-            </div>
+            {% include 'includes/products-nav.html' %}
 
             <!-- Display in smaller screens-->
-            <div class="d-block d-md-none dropdown ps-2">
-                <a class="dropdown-toggle link-dark" type="button" id="categories-dropdown" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    Categories
-                </a>
-                <div class="collapse dropdown-menu" aria-labelledby="categories-dropdown">
-                    <a class="dropdown-item" href="#">Household</a>
-                    <a class="dropdown-item" href="#">Kitchen</a>
-                    <a class="dropdown-item" href="#">Storage</a>
-                    <a class="dropdown-item" href="#">Wellbeing</a>
-                    <a class="dropdown-item" href="#">On The Go</a>
-                    <a class="dropdown-item" href="#">Kids &amp; Baby</a>
-                    <a class="dropdown-item" href="#">All Products</a>
-                </div>
-            </div>
+            {% include 'includes/mobile-products-nav.html' %}
         </div>
 
         <!--Products container-->
