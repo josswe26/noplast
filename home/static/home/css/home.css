@@ -1,12 +1,10 @@
 /* Categories section */
 #categories-section {
-    background: url("/media/categories-bg.jpg") no-repeat center center fixed;
-    background-size: cover;
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 232px);
 }
 
 #categories-section img {
-    width: 350px; /* Avoid some images becoming to wide */
+    width: 300px; /* Avoid some images becoming to wide */
 }
 
 #categories-section i {
