@@ -112,10 +112,10 @@
             </div>
           </li>
           <li class="list-inline-item">
-            <a href="" class="nav-link link-dark p-2">
+            <a href="{% url 'view_bag' %}" class="nav-link link-dark p-2">
               {% if grand_total %}
               <i class="fas fa-shopping-cart icon"></i>
-              <p id="grand-total" class="my-0">€0.00</p>
+              <p id="grand-total" class="my-0">${{ grand_total|floatformat:2 }}</p>
               {% else %}
               <i class="fas fa-cart-arrow-down icon"></i>
               {% endif %}
@@ -130,7 +130,7 @@
       <form method="GET" action="{% url 'products' %}">
         <div class="input-group w-100">
           <input class="form-control border-none" type="text" name="q" placeholder="Search...">
-          <button class="btn-main hvr-back-pulse form-control" type="submit">
+          <button class="btn btn-main hvr-back-pulse form-control" type="submit">
             <span class="icon">
               <i class="fas fa-search"></i>
             </span>
