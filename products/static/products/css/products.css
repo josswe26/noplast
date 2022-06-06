@@ -1,0 +1,36 @@
+/* Sort selector */
+
+#sort-selector {
+    background-color: #f4f6fc !important;
+    color: #001f3d;
+}
+
+.border-info {
+    border-color: #dee2e6 !important;
+}
+
+/* Back to top button */
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: sticky;
+    bottom: 10px;
+    left: 100%;
+    margin-right: 10px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
+/* Medias queries */
+
+/* X-small screens sizes and down */
+@media (max-width: 576px) {
+    .btt-button {
+        height: 32px;
+        width: 32px;
+        bottom: 5px;
+        margin-right: 5px;
+    }
+}

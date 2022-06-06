@@ -62,6 +62,19 @@ body {
     color: #09abd7 !important;
 }
 
+.btn-main {
+    background-color: #001f3d;
+    color: #f4f6fc !important;
+    border-color: #001f3d;
+}
+
+.hvr-back-pulse:active,
+.hvr-back-pulse:focus,
+.hvr-back-pulse:hover {
+    background-color: #09abd7;
+    border-color: #09abd7;
+}
+
 .icon {
     font-size: 1.7rem;
 }
@@ -89,7 +102,7 @@ body {
     color: #001f3d;
 }
 
-#search-bar input, 
+#search-bar input,
 #search-bar button {
     height: 4rem;
     font-size: 1.5rem;
@@ -97,6 +110,7 @@ body {
 
 #search-bar input {
     width: 90%;
+    background-color: #f4f6fc;
 }
 
 #search-bar button {
@@ -116,13 +130,13 @@ body {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: #f4f6fc;
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #f4f6fc;
+    z-index: -1;
 }
 
 /* Medias queries */
@@ -143,7 +157,7 @@ body {
     #search-bar input {
         width: 80%;
     }
-    
+
     #search-bar button {
         width: 20%;
     }
