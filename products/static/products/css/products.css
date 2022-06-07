@@ -23,6 +23,12 @@
     cursor: pointer;
 }
 
+/* Quantity buttons */
+.input-group-append .btn:focus,
+.input-group-prepend .btn:focus {
+    box-shadow: none;
+}
+
 /* Medias queries */
 
 /* X-small screens sizes and down */
