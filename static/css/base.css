@@ -35,6 +35,10 @@ body {
     color: #055772 !important;
 }
 
+.c--dark-blue {
+    color: #001f3d;
+}
+
 .bg--light-blue {
     background-color: #055772;
 }
