@@ -68,9 +68,16 @@ body {
     border-color: #001f3d;
 }
 
+.btn-alternate {
+    background-color: #055772;
+    color: #f4f6fc !important;
+    border-color: #055772;
+}
+
 .hvr-back-pulse:active,
 .hvr-back-pulse:focus,
-.hvr-back-pulse:hover {
+.hvr-back-pulse:hover,
+.btn-alternate:hover {
     background-color: #09abd7;
     border-color: #09abd7;
 }
