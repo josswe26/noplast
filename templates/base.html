@@ -115,7 +115,7 @@
             <a href="{% url 'view_bag' %}" class="nav-link link-dark p-2">
               {% if grand_total %}
               <i class="fas fa-shopping-cart icon"></i>
-              <p id="grand-total" class="my-0">${{ grand_total|floatformat:2 }}</p>
+              <p id="grand-total" class="my-0">€{{ grand_total|floatformat:2 }}</p>
               {% else %}
               <i class="fas fa-cart-arrow-down icon"></i>
               {% endif %}
