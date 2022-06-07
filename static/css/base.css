@@ -66,6 +66,16 @@ body {
     color: #09abd7 !important;
 }
 
+.link-blue {
+    color: #09abd7;
+    text-decoration: none;
+}
+
+.link-blue:hover {
+    color: #001f3d;
+    text-decoration: none;
+}
+
 .btn-main {
     background-color: #001f3d;
     color: #f4f6fc !important;
@@ -88,6 +98,28 @@ body {
 
 .icon {
     font-size: 1.7rem;
+}
+
+/* Back to top, remove and update buttons*/
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: sticky;
+    bottom: 10px;
+    left: 100%;
+    margin-right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+/* Quantity buttons */
+.input-group-append .btn:focus,
+.input-group-prepend .btn:focus {
+    box-shadow: none;
 }
 
 /* Header */

@@ -9,26 +9,6 @@
     border-color: #dee2e6 !important;
 }
 
-/* Back to top button */
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: sticky;
-    bottom: 10px;
-    left: 100%;
-    margin-right: 10px;
-}
-
-.btt-link {
-    cursor: pointer;
-}
-
-/* Quantity buttons */
-.input-group-append .btn:focus,
-.input-group-prepend .btn:focus {
-    box-shadow: none;
-}
-
 /* Medias queries */
 
 /* X-small screens sizes and down */
