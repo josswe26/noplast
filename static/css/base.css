@@ -43,6 +43,10 @@ body {
     background-color: #055772;
 }
 
+.bg--dark-blue {
+    background-color: #001f3d;
+}
+
 .bg--white {
     background-color: #f4f6fc;
 }
