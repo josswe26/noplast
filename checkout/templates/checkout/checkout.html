@@ -81,11 +81,11 @@
                         <fieldset class="rounded px-3 mb-5">
                             <legend class="fieldset-label small c--white px-2 w-auto">Shipping Address</legend>
                             {{ order_form.phone_number | as_crispy_field }}
-                            {{ order_form.country | as_crispy_field }}
+                            {{ order_form.street_address | as_crispy_field }}
                             {{ order_form.postcode | as_crispy_field }}
                             {{ order_form.city | as_crispy_field }}
-                            {{ order_form.street_address | as_crispy_field }}
                             {{ order_form.state | as_crispy_field }}
+                            {{ order_form.country | as_crispy_field }}
                             <div class="form-check form-check-inline float-right mr-0">
                                 {% if user.is_authenticated %}
                                     <label class="form-check-label text-muted" for="id-save-info">Save this information for the next time</label>
@@ -127,3 +127,10 @@
         </div>
 </div>
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+{% endblock %} 
