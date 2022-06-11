@@ -40,7 +40,8 @@
                             Spend <strong>€{{ free_delivery_delta }}</strong> more to get free shipping!
                         </p>
                     {% endif %}
-                    <a href="{% url 'view_bag' %}" class="btn btn-main hvr-back-pulse rounded-0 rounded-bottom w-100">
+                    <a href="{% url 'checkout' %}" class="btn btn-main hvr-back-pulse rounded-0 w-100
+                        rounded-bottom {% if free_delivery_delta == 0 %}rounded-top{% endif %}">
                         <span class="text-uppercase">Go To Secure Checkout</span>
                             <i class="fas fa-lock"></i>
                     </a>
