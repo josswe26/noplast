@@ -3,7 +3,7 @@
 .stripe-style-input {
   box-sizing: border-box;
   height: 40px;
-  padding: 10px 12px;
+  padding: 8px 12px;
   border: 1px solid transparent;
   background-color: #001f3d;
   box-shadow: 0 1px 3px 0 #055772;
@@ -40,6 +40,16 @@
     ;
 }
 
+select,
+select option {
+    color: #f4f6fc;
+}
+
+select:invalid,
+select option[value=""] {
+    color: #6c757d !important;
+}
+
 /* Loading overlay */
 #loading-overlay {
 	display: none;
@@ -58,4 +68,4 @@
     justify-content: center;
     margin: 0;
     height: 100%;
-} 
+}
