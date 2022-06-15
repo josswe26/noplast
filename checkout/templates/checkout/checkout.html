@@ -27,7 +27,7 @@
                         <div class="col-7 offset-2">
                             <p class="mb-1 mt-0 small c--light-blue">Item</p>
                         </div>
-                        <div class="col-3 text-right">
+                        <div class="col-3 text-end">
                             <p class="mb-1 mt-0 small c--light-blue">Subtotal</p>
                         </div>
                     </div>
@@ -47,12 +47,12 @@
                                 <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                                 <p class="my-0 small c--light-blue">Qty: {{ item.quantity }}</p>
                             </div>
-                            <div class="col-3 text-right">
+                            <div class="col-3 text-end">
                                 <p class="my-0 small c--light-blue">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                             </div>
                         </div>
                     {% endfor %}
-                    <div class="row c--dark-blue text-right">
+                    <div class="row c--dark-blue text-end">
                         <div class="col-7 offset-2">
                             <p class="my-0">Order Total:</p>
                             <p class="my-0">Delivery:</p>
@@ -70,7 +70,7 @@
             <!-- Checkout form -->
             <div class="container-fluid col-12 col-lg-8 bg--dark-blue">
                 <div class="container my-5 w-75">
-                    <p class="text-muted">Please fill out the form below to complete your order</p>
+                    <p class="c--grey">Please fill out the form below to complete your order</p>
                     <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                         {% csrf_token %}
                         <fieldset class="rounded px-3 mb-5">
@@ -86,14 +86,14 @@
                             {{ order_form.city | as_crispy_field }}
                             {{ order_form.state | as_crispy_field }}
                             {{ order_form.country | as_crispy_field }}
-                            <div class="form-check form-check-inline float-right mr-0">
+                            <div class="form-check form-check-inline float-end me-0">
                                 {% if user.is_authenticated %}
-                                    <label class="form-check-label text-muted" for="id-save-info">Save this information for the next time</label>
-                                    <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                                    <label class="form-check-label c--grey" for="id-save-info">Save this information for the next time</label>
+                                    <input class="form-check-input ms-2 me-0" type="checkbox" id="id-save-info" name="save-info" checked>
                                 {% else %}
-                                    <label class="form-check-label" for="id-save-info">
-                                        <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                        <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <label class="form-check-label c--grey" for="id-save-info">
+                                        <a class="link-light" href="{% url 'account_signup' %}">Create an account</a> or 
+                                        <a class="link-light" href="{% url 'account_login' %}">login</a> to save this information
                                     </label>
                                 {% endif %}
                             </div>
@@ -109,7 +109,7 @@
                             <input type="hidden" value="{{ client_secret }}" name="client_secret">
                         </fieldset>
 
-                        <div class="submit-button mt-5 text-right">                    
+                        <div class="submit-button mt-5 text-end">                    
                             <a href="{% url 'view_bag' %}" class="link-light me-2">
                                 <i class="fas fa-chevron-left"></i>
                                 Adjust Bag

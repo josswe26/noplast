@@ -22,7 +22,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #6c757d;
+    color: #a8aeb3;
 }
 
 .fieldset-label {
@@ -34,7 +34,7 @@
 #card-element {
     background-color: #001f3d;
     color: #f4f6fc;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     border: 1px solid #055772;
     border-radius: 0.25rem;
     ;
@@ -47,7 +47,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-    color: #6c757d !important;
+    color: #a8aeb3 !important;
 }
 
 /* Loading overlay */

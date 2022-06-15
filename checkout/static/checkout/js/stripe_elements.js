@@ -13,12 +13,12 @@ var elements = stripe.elements();
 var style = {
     base: {
         color: '#f4f6fc',
-        iconColor: '#6c757d',
+        iconColor: '#a8aeb3',
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {
-            color: '#6c757d',
+            color: '#a8aeb3',
         }
     },
     invalid: {

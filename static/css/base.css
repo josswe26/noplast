@@ -39,6 +39,10 @@ body {
     color: #001f3d;
 }
 
+.c--grey {
+    color: #a8aeb3;
+}
+
 .bg--light-blue {
     background-color: #055772;
 }
@@ -176,6 +180,12 @@ body {
     letter-spacing: 3px;
 }
 
+input[name='q']::placeholder {
+    color: #6c757d;
+}
+
+/* Page overlay */
+
 .overlay {
     height: 100%;
     width: 100%;
@@ -251,6 +261,68 @@ body {
     height: 100px;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+}
+
+.allauth-form-inner-content input {
+    margin-bottom: 12px;
+    border-color: #dee2e6;
+    background-color: #f4f6fc;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content .form-group {
+    margin-bottom: 12px;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #6c757d;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #f4f6fc;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #055772;
+    border: 1px solid #055772;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.25rem;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+	background-color: #09abd7;
+    border-color: #09abd7;
+}
+
+.allauth-form-inner-content a {
+	color: #055772;
+    text-decoration: none;
+}
+
+.allauth-form-inner-content a:hover {
+	color: #09abd7;
 }
 
 /* Medias queries */
