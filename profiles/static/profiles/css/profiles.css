@@ -4,7 +4,12 @@
     background-color: #f4f6fc;
     height: 40px;
     padding: 8px 12px;
-  }
+}
+
+.default-info input:focus,
+.default-info select:focus {
+    background-color: #f4f6fc;
+}
 
 #profile-update-form .form-control {
     color: #001f3d;
