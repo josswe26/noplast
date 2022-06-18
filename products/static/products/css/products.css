@@ -9,6 +9,18 @@
     border-color: #dee2e6 !important;
 }
 
+/* Product form */
+
+.product-form-field {
+    background-color: #f4f6fc;
+    color: #001f3d !important;
+    margin-bottom: 12px;
+}
+
+.product-form-field:focus{
+    background-color: #f4f6fc;
+}
+
 /* Medias queries */
 
 /* X-small screens sizes and down */
