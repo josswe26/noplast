@@ -1,0 +1,24 @@
+.default-info input,
+.default-info select {
+    margin-bottom: 12px;
+    background-color: #f4f6fc;
+    height: 40px;
+    padding: 8px 12px;
+  }
+
+#profile-update-form .form-control {
+    color: #001f3d;
+}
+
+.profile-form-input::placeholder {
+    color: #6c757d;
+}
+
+#id_default_country,
+#id_default_country option:not(:first-child) {
+    color: #001f3d;
+}
+
+#id_default_country option:first-child {
+    color: #6c757d;
+}

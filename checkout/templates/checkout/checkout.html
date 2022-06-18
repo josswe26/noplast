@@ -89,7 +89,7 @@
                             <div class="form-check form-check-inline float-end me-0">
                                 {% if user.is_authenticated %}
                                     <label class="form-check-label c--grey" for="id-save-info">Save this information for the next time</label>
-                                    <input class="form-check-input ms-2 me-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                                    <input class="form-check-input float-end ms-2 me-0" type="checkbox" id="id-save-info" name="save-info" checked>
                                 {% else %}
                                     <label class="form-check-label c--grey" for="id-save-info">
                                         <a class="link-light" href="{% url 'account_signup' %}">Create an account</a> or 

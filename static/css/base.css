@@ -180,6 +180,10 @@ body {
     letter-spacing: 3px;
 }
 
+input[name='q'] {
+    color: #001f3d;
+}
+
 input[name='q']::placeholder {
     color: #6c757d;
 }
