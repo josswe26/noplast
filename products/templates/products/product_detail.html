@@ -26,17 +26,37 @@
             <div class="product-container my-5 col-10 offset-1">
                 <div class="row">
                     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                        <div class="image-container my-5">
+                        <div class="position-relative image-container my-5">
                             {% if product.image %}
                                 <a href="{{ product.image.url }}" target="_blank">
                                     <img class="card-img-top img-fluid border" src="{{ product.image.url }}"
                                         alt="{{ product.name }}">
+                                </a>
+
+                                <!-- Add/remove from favorites link -->
+                                <a class="favorite-link link-blue" href="{% url 'add_favorite' product.id %}">
+                                        {% if favorite %}
+                                            <i class="fas fa-heart" aria-label="Remove from favorites"></i>
+                                        {% else %}
+                                            <i class="far fa-heart" aria-label="Add to favorites"></i>
+                                        {% endif %}
                                 </a>
                             {% else %}
                                 <a href="">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
                                         alt="{{ product.name }}">
                                 </a>
+
+                                <!-- Add/remove from favorites link -->
+                                {% if request.user.is_authenticated %}
+                                    <a class="favorite-link" href="{% url 'add_favorite' product.id %}">
+                                            {% if product.users_favorites %}    
+                                                <i class="fas fa-heart"></i>
+                                            {% else %}
+                                                <i class="far fa-heart"></i>
+                                            {% endif %}
+                                    </a>
+                                {% endif %}
                             {% endif %}
                         </div>
                     </div>

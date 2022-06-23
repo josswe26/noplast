@@ -9,6 +9,15 @@
     border-color: #dee2e6 !important;
 }
 
+/* Favorites */
+
+.favorite-link {
+    font-size: 2rem;
+    position: absolute;
+    right: 10.5px;
+    top: 3px;
+}
+
 /* Product form */
 
 .product-form-field {

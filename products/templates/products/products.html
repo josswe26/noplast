@@ -32,8 +32,14 @@
         <div class="container-fluid">
             <div class="row mt-1 mb-2">
 
-                <!-- Sort selector -->
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+
+                    <!-- Favorites page link -->
+                    <a class="logo-text link-blue me-3" href="{% url 'favorites' %}">
+                        Favorites <i class= "fas fa-heart"></i>
+                    </a>
+
+                    <!-- Sort selector -->
                     <div class="sort-select-wrapper">
                         <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
