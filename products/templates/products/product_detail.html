@@ -65,7 +65,7 @@
                             <p class="mb-0">{{ product.name }}</p>
                             <p class="lead mb-0 text-left text-left c--light-blue">€{{ product.price }}</p>
                             {% if product.rating %}
-                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                <small class="text-muted"><i class="fas fa-star me-1"></i>{{ product.rating }} / 5</small>
                             {% else %}
                                 <small class="text-muted">No rating</small>
                             {% endif %}
@@ -117,6 +117,42 @@
                                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 </div>
                             </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product reviews -->
+                <div class="row">
+                    <div class="col-12 col-lg-10 offset-lg-2">
+                            <hr class="my-0">
+                            <a class="logo-text link-dark my-0" data-bs-toggle="collapse" href="#collapse-reviews" 
+                                role="button" aria-expanded="false" aria-controls="collapse-reviews">            
+                                <p class="py-3 my-0">Reviews ({{ product_reviews | length }})</p>
+                            </a>
+                            <hr class="my-0">
+                        <div class="collapse" id="collapse-reviews">
+                            <div class="review-container mt-4">
+                                {% if product_reviews%}
+                                    {% for review in product_reviews %}
+                                        <div class="my-4">
+                                            <h5>{{ review.title }}</h5>
+                                            <p>{{ review.content }}</p>
+                                            <p class="c--light-blue"><i class="fas fa-star me-1"></i>{{ review.rating }} / 5</p>
+                                            <p class="text-muted small">By {{ review.author }} on {{ review.created_on }}</p>
+                                        </div>                                       
+                                    {% endfor %}
+                                        <a href="" class="btn btn-main hvr-back-pulse">
+                                            <span class="text-uppercase">Leave a Review</span>
+                                        </a>                
+                                    {% else %}
+                                        <div class="my-4">
+                                            No reviews for this product yet.
+                                        </div>
+                                        <a href="" class="btn btn-main hvr-back-pulse">
+                                            <span class="text-uppercase">Leave a Review</span>
+                                        </a>   
+                                {% endif %}
+                            </div>
                         </div>
                     </div>
                 </div>
