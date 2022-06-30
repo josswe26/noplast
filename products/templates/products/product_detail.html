@@ -134,24 +134,21 @@
                             <div class="review-container mt-4">
                                 {% if product_reviews%}
                                     {% for review in product_reviews %}
-                                        <div class="my-4">
+                                        <div class="my-4 border-bottom">
                                             <h5>{{ review.title }}</h5>
                                             <p>{{ review.content }}</p>
                                             <p class="c--light-blue"><i class="fas fa-star me-1"></i>{{ review.rating }} / 5</p>
                                             <p class="text-muted small">By {{ review.author }} on {{ review.created_on }}</p>
-                                        </div>                                       
+                                        </div>                                    
                                     {% endfor %}
-                                        <a href="" class="btn btn-main hvr-back-pulse">
-                                            <span class="text-uppercase">Leave a Review</span>
-                                        </a>                
                                     {% else %}
                                         <div class="my-4">
                                             No reviews for this product yet.
                                         </div>
-                                        <a href="" class="btn btn-main hvr-back-pulse">
-                                            <span class="text-uppercase">Leave a Review</span>
-                                        </a>   
                                 {% endif %}
+                                <a href="" class="btn btn-main hvr-back-pulse">
+                                    <span class="text-uppercase">Leave a Review</span>
+                                </a>
                             </div>
                         </div>
                     </div>
