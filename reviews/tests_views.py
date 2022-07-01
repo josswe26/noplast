@@ -31,6 +31,7 @@ class TestReviewsViews(TestCase):
 
     def test_add_review(self):
         """ Test a review is added to the product """
+        # Attempt to add a review
         self.client.post(f'/reviews/add_review/{self.test_product.id}/', {
             'title': 'Test title',
             'content': 'Test content',
@@ -38,3 +39,13 @@ class TestReviewsViews(TestCase):
         })
         review = Review.objects.filter(title='Test title')
         self.assertEqual(len(review), 1)
+        # Attempt to submit a second review
+        response = self.client.post(f'/reviews/add_review/{self.test_product.id}/', {
+            'title': 'Test title 2',
+            'content': 'Test content 2',
+            'rating': 5,
+        })
+        all_reviews = Review.objects.all()
+        # Check the user can only submit one review per product
+        self.assertEqual(len(all_reviews), 1)
+        self.assertRedirects(response, f'/products/{self.test_product.id}/')

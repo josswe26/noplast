@@ -24,19 +24,29 @@ def show_reviews(request):
 def add_review(request, product_id):
     """ Display form to add a review to a product """
     product = get_object_or_404(Product, id=product_id)
+    user_review = Review.objects.filter(
+        author=request.user, product=product)
 
-    if request.method == 'POST':
-        form = ReviewForm(request.POST, request.FILES)
-        if form.is_valid():
-            form.instance.author = request.user
-            form.instance.product = product
-            form.save()
-            messages.success(request, 'Your product review has been submitted')
-            return redirect(reverse('product_detail', args=[product.id]))
-        else:
-            messages.error(request, 'Failed to submit the review. Please ensure the form is valid.')
+    # Check if user already submitted a review for the product
+    if user_review:
+        messages.error(request,
+                       'You have already submitted a review for this product')
+        return redirect(reverse('product_detail', args=[product.id]))
     else:
-        form = ReviewForm()
+        if request.method == 'POST':
+            form = ReviewForm(request.POST, request.FILES)
+            if form.is_valid():
+                form.instance.author = request.user
+                form.instance.product = product
+                form.save()
+                messages.success(request,
+                                 'Your product review has been submitted')
+                return redirect(reverse('product_detail', args=[product.id]))
+            else:
+                messages.error(request, 'Failed to submit the review. \
+                    Please ensure the form is valid.')
+        else:
+            form = ReviewForm()
 
     template = 'reviews/add_review.html'
 
