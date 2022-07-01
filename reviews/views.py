@@ -41,6 +41,9 @@ def add_review(request, product_id):
                 form.save()
                 messages.success(request,
                                  'Your product review has been submitted')
+
+                update_product_rating(product)
+
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, 'Failed to submit the review. \
@@ -56,3 +59,16 @@ def add_review(request, product_id):
     }
 
     return render(request, template, context)
+
+
+def update_product_rating(product):
+    """ Update the rating field for the product """
+
+    total_reviews = Review.objects.filter(product=product)
+    nr_of_total_reviews = total_reviews.count()
+    ratings_sum = 0
+    for review in total_reviews:
+        ratings_sum += review.rating
+
+    product.rating = ratings_sum / nr_of_total_reviews
+    product.save()
