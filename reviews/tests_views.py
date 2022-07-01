@@ -1,6 +1,7 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from products.models import Product
+from .models import Review
 
 # Create your tests here.
 class TestReviewsViews(TestCase):
@@ -26,3 +27,14 @@ class TestReviewsViews(TestCase):
         response = self.client.get(f'/reviews/add_review/{self.test_product.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'reviews/add_review.html')
+
+
+    def test_add_review(self):
+        """ Test a review is added to the product """
+        self.client.post(f'/reviews/add_review/{self.test_product.id}/', {
+            'title': 'Test title',
+            'content': 'Test content',
+            'rating': 5,
+        })
+        review = Review.objects.filter(title='Test title')
+        self.assertEqual(len(review), 1)
