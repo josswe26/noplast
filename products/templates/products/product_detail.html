@@ -35,11 +35,11 @@
 
                                 <!-- Add/remove from favorites link -->
                                 <a class="favorite-link link-blue" href="{% url 'add_favorite' product.id %}">
-                                        {% if favorite %}
-                                            <i class="fas fa-heart" aria-label="Remove from favorites"></i>
-                                        {% else %}
-                                            <i class="far fa-heart" aria-label="Add to favorites"></i>
-                                        {% endif %}
+                                    {% if favorite %}
+                                        <i class="fas fa-heart" aria-label="Remove from favorites"></i>
+                                    {% else %}
+                                        <i class="far fa-heart" aria-label="Add to favorites"></i>
+                                    {% endif %}
                                 </a>
                             {% else %}
                                 <a href="">
@@ -50,11 +50,11 @@
                                 <!-- Add/remove from favorites link -->
                                 {% if request.user.is_authenticated %}
                                     <a class="favorite-link" href="{% url 'add_favorite' product.id %}">
-                                            {% if product.users_favorites %}    
-                                                <i class="fas fa-heart"></i>
-                                            {% else %}
-                                                <i class="far fa-heart"></i>
-                                            {% endif %}
+                                        {% if product.users_favorites %}
+                                            <i class="fas fa-heart"></i>
+                                        {% else %}
+                                            <i class="far fa-heart"></i>
+                                        {% endif %}
                                     </a>
                                 {% endif %}
                             {% endif %}
@@ -72,7 +72,8 @@
                             {% if request.user.is_superuser %}
                                 <small class="ms-3">
                                     <a href="{% url 'edit_product' product.id %}" class="update-link link-dark">Edit</a> |
-                                    <a href="{% url 'delete_product' product.id %}" class="remove-item link-blue float-right" id="remove_{{ item.item_id }}">Delete</a>
+                                    <a href="{% url 'delete_product' product.id %}" class="remove-item link-blue float-right"
+                                        id="remove_{{ item.item_id }}">Delete</a>
                                 </small>
                             {% endif %}
                             <p class="mt-3">{{ product.description }}</p>
@@ -86,18 +87,18 @@
                                         <div class="form-group w-50">
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
-                                                    <button class="decrement-qty btn" 
-                                                        data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
-                                                            <i class="fas fa-minus c--light-blue"></i>
+                                                    <button class="decrement-qty btn" data-item_id="{{ product.id }}"
+                                                        id="decrement-qty_{{ product.id }}">
+                                                        <i class="fas fa-minus c--light-blue"></i>
                                                     </button>
                                                 </div>
-                                                <input class="form-control qty_input text-center" type="number" name="quantity"
-                                                    value="1" min="1" max="99" data-item_id="{{ product.id }}"
-                                                    id="id_qty_{{ product.id }}">
+                                                <input class="form-control qty_input text-center" type="number"
+                                                    name="quantity" value="1" min="1" max="99"
+                                                    data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                                 <div class="input-group-append">
-                                                    <button class="btn increment-qty"
-                                                        data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
-                                                            <i class="fas fa-plus c--light-blue"></i>
+                                                    <button class="btn increment-qty" data-item_id="{{ product.id }}"
+                                                        id="increment-qty_{{ product.id }}">
+                                                        <i class="fas fa-plus c--light-blue"></i>
                                                     </button>
                                                 </div>
                                             </div>
@@ -123,33 +124,49 @@
 
                 <!-- Product reviews -->
                 <div class="row">
-                    <div class="col-12 col-lg-10 offset-lg-2">
-                            <hr class="my-0">
+                    <div class="col-12 col-lg-10 offset-lg-1">
+                        <hr class="my-0">
                             <a class="logo-text link-dark my-0" data-bs-toggle="collapse" href="#collapse-reviews" 
                                 role="button" aria-expanded="false" aria-controls="collapse-reviews">            
                                 <p class="py-3 my-0">Reviews ({{ product_reviews | length }})</p>
                             </a>
                             <hr class="my-0">
-                        <div class="collapse" id="collapse-reviews">
-                            <div class="review-container mt-4">
-                                {% if product_reviews%}
+                        <div class="{% if current_sorting == 'None_None' %}collapse{% endif %}" id="collapse-reviews">
+                            {% if product_reviews %}
+                                <!-- Sort selector -->
+                                <div class="sort-select-wrapper my-4">
+                                    <select id="sort-selector" class="custom-select custom-select-sm rounded border {% if current_sorting != 'None_None' %}border-blue{% endif %}">
+                                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort
+                                            by...</option>
+                                        <option value="date_asc" {% if current_sorting == 'date_asc' %}selected{% endif %}>Date
+                                            (older to newest)</option>
+                                        <option value="date_desc" {% if current_sorting == 'date_desc' %}selected{% endif %}>
+                                            Date (newest to oldest)</option>
+                                        <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>
+                                            Rating (low to high)</option>
+                                        <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <div class="review-container mt-4">
                                     {% for review in product_reviews %}
                                         <div class="my-4 border-bottom">
                                             <h5>{{ review.title }}</h5>
                                             <p>{{ review.content }}</p>
                                             <p class="c--light-blue"><i class="fas fa-star me-1"></i>{{ review.rating }} / 5</p>
                                             <p class="text-muted small">By {{ review.author }} on {{ review.created_on }}</p>
-                                        </div>                                    
-                                    {% endfor %}
-                                    {% else %}
-                                        <div class="my-4">
-                                            No reviews for this product yet.
                                         </div>
-                                {% endif %}
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                <div class="my-4">
+                                    No reviews for this product yet.
+                                </div>
+                            {% endif %}
                                 <a href="{% url 'add_review' product.id %}" class="btn btn-main hvr-back-pulse">
                                     <span class="text-uppercase">Leave a Review</span>
                                 </a>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -161,4 +178,27 @@
 {% block postloadjs %}
 {{ block.super }}
 {% include 'includes/quantity_input_script.html' %}
-{% endblock %} 
+ 
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset"){
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        })
+    </script> 
+{% endblock %}

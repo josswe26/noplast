@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+    <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -36,32 +36,43 @@
 
                     <!-- Favorites page link -->
                     <a class="logo-text link-blue me-3" href="{% url 'favorites' %}">
-                        Favorites <i class= "fas fa-heart"></i>
+                        Favorites <i class="fas fa-heart"></i>
                     </a>
 
                     <!-- Sort selector -->
                     <div class="sort-select-wrapper">
-                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
-                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to high)</option>
-                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to low)</option>
-                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
-                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
-                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                        <select id="sort-selector"
+                            class="custom-select custom-select-sm rounded border {% if current_sorting != 'None_None' %}border-blue{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                            </option>
+                            <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low
+                                to high)</option>
+                            <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                                (high to low)</option>
+                            <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating
+                                (low to high)</option>
+                            <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating
+                                (high to low)</option>
+                            <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+                            </option>
+                            <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
+                            </option>
+                            <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>
+                                Category (A-Z)</option>
+                            <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>
+                                Category (Z-A)</option>
                         </select>
                     </div>
                 </div>
-    
+
                 <!-- Product counter and link -->
                 <div class="col-12 col-md-6 order-md-first d-flex justify-content-center justify-content-md-start">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
                             <span class="small"><a class="link-dark" href="{% url 'products' %}">Products Home</a> | </span>
                         {% endif %}
-                        {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                        {{ products|length }} Products{% if search_term %} found for
+                        <strong>"{{ search_term }}"</strong>{% endif %}
                     </p>
                 </div>
             </div>
@@ -75,13 +86,14 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5">
                             <div class="card h-100">
                                 {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
-                                </a>
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                    </a>
                                 {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png"
+                                            alt="{{ product.name }}">
+                                    </a>
                                 {% endif %}
                                 <div class="card-body pb-1 bg--white">
                                     <p class="mb-0">{{ product.name }}</p>
@@ -91,14 +103,18 @@
                                         <div class="col">
                                             <p class="lead mb-0 pb-1 text-left font-weight-bold">€{{ product.price }}</p>
                                             {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} /
+                                                    5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             {% if request.user.is_superuser %}
                                                 <small class="float-end">
-                                                    <a href="{% url 'edit_product' product.id %}" class="update-link link-dark">Edit</a> |
-                                                    <a href="{% url 'delete_product' product.id %}" class="remove-item link-blue float-right" id="remove_{{ item.item_id }}">Delete</a>
+                                                    <a href="{% url 'edit_product' product.id %}"
+                                                        class="update-link link-dark">Edit</a> |
+                                                    <a href="{% url 'delete_product' product.id %}"
+                                                        class="remove-item link-blue float-right"
+                                                        id="remove_{{ item.item_id }}">Delete</a>
                                                 </small>
                                             {% endif %}
                                         </div>
@@ -116,25 +132,25 @@
     <div class="btt-button shadow-sm border rounded">
         <a class="btt-link link-dark d-flex h-100">
             <i class="fas fa-arrow-up mx-auto my-auto"></i>
-        </a>	
+        </a>
     </div>
 {% endblock %}
 
 {% block postloadjs %}
-    {{ block.super }}
+{{ block.super }}
     <script type="text/javascript">
-		$('.btt-link').click(function(e) {
-			window.scrollTo(0,0);
-		})
-	</script>
-    
+        $('.btt-link').click(function (e) {
+            window.scrollTo(0, 0);
+        })
+    </script>
+
     <script type="text/javascript">
-        $('#sort-selector').change(function() {
+        $('#sort-selector').change(function () {
             var selector = $(this);
             var currentUrl = new URL(window.location);
 
             var selectedVal = selector.val();
-            if(selectedVal != "reset"){
+            if (selectedVal != "reset") {
                 var sort = selectedVal.split("_")[0];
                 var direction = selectedVal.split("_")[1];
 
