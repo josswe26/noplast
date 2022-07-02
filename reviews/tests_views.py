@@ -67,6 +67,24 @@ class TestReviewsViews(TestCase):
         self.assertEqual(len(all_reviews), 1)
         self.assertRedirects(response, f'/products/{self.test_product.id}/')
 
+    def test_edit_review(self):
+        """ Test a review can be edited """
+        # Create test review
+        test_review = Review.objects.create(author=self.test_user,
+                                            product=self.test_product,
+                                            title='Test review',
+                                            content='Test content',
+                                            rating=5)
+        # Submit form to edit review with altered content
+        response = self.client.post(f'/reviews/edit_review/{test_review.id}/', {
+            'title': test_review.title,
+            'content': 'Edited content',
+            'rating': test_review.rating,
+        })
+        self.assertRedirects(response, f'/products/{test_review.product.id}/')
+        self.assertEqual(Review.objects.last().content, "Edited content")
+
+
     def test_update_product_rating(self):
         """ Test the product rating is being updated """
         self.client.post(f'/reviews/add_review/{self.test_product.id}/', {
