@@ -7,7 +7,7 @@ from .views import update_product_rating
 
 # Create your tests here.
 class TestReviewsViews(TestCase):
-
+    """ Test for the Review app views """
     def setUp(self):
         self.test_user = User.objects.create_user(username='test_user',
                                                   password='test_password')
@@ -16,6 +16,8 @@ class TestReviewsViews(TestCase):
                                                    price=10,
                                                    rating=None)
         self.client.login(username='test_user', password='test_password')
+
+    # Tests for page rendering
 
     def test_get_reviews_page(self):
         """ Test the reviews page is displayed """
@@ -29,6 +31,19 @@ class TestReviewsViews(TestCase):
             f'/reviews/add_review/{self.test_product.id}/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'reviews/add_review.html')
+
+    def test_get_edit_review_page(self):
+        """ Test the edit review page is displayed """
+        test_review = Review.objects.create(author=self.test_user,
+                                            product=self.test_product,
+                                            title='Test review',
+                                            content='Test content',
+                                            rating=5)
+        response = self.client.get(f'/reviews/edit_review/{test_review.id}/')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'reviews/edit_review.html')
+
+    # Tests for page functionality
 
     def test_add_review(self):
         """ Test a review is added to the product """

@@ -61,6 +61,13 @@ def add_review(request, product_id):
     return render(request, template, context)
 
 
+@login_required
+def edit_review(request, review_id):
+    """ Display form to edit a review """
+
+    return render(request, 'reviews/edit_review.html')
+
+
 def update_product_rating(product):
     """ Update the rating field for the product """
 
