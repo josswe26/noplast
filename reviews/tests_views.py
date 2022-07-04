@@ -84,6 +84,19 @@ class TestReviewsViews(TestCase):
         self.assertRedirects(response, f'/products/{test_review.product.id}/')
         self.assertEqual(Review.objects.last().content, "Edited content")
 
+    def test_delete_review(self):
+        """ Test a review can be deleted """
+        # Create test review
+        test_review = Review.objects.create(author=self.test_user,
+                                            product=self.test_product,
+                                            title='Test review',
+                                            content='Test content',
+                                            rating=5)
+        self.assertEqual(len(Review.objects.all()), 1)
+        # Submit form to delete review
+        response = self.client.post(f'/reviews/delete_review/{test_review.id}/')
+        self.assertRedirects(response, f'/products/{test_review.product.id}/')
+        self.assertEqual(len(Review.objects.all()), 0)
 
     def test_update_product_rating(self):
         """ Test the product rating is being updated """
