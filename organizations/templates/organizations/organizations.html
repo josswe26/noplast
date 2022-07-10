@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'reviews/css/reviews.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <!-- Page overlay to cover image -->
+    <div class="overlay"></div>
+    <div class="container-fluid">
+
+        <!-- Organizations main header -->
+        <div class="row py-4 border-top border-bottom">
+            <div class="col text-center">
+                <h1 class="logo-text">Organizations</h1>
+            </div>
+        </div>
+
+        <!-- Organizations -->
+        <div class="row">
+            <div class="col-10 offset-1">
+
+                <div class="review-container mt-4">
+                    {% for organization in organizations %}
+                        <div class="row my-5 pb-4 border-bottom">
+                            <div class="col-12 col-md-3">
+                                <a href="{% url 'organizations' %}">
+                                    <div class="organization-logo me-3 mb-5">
+                                        <a href="{{ organization.logo.url }}" target="_blank">
+                                            <img class="card-img-top img-fluid border" src="{{ organization.logo.url }}"
+                                                alt="{{ organization.name.name }}">
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-md-9">
+                                <h3 class="c--light-blue mb-3 logo-text">{{ organization.name }}</h3>
+                                <p>{{ organization.description | linebreaks }}</p>
+
+                                <div class="mt-4">
+                                    <a href="{{ organization.url }}" target="_blank" class="btn btn-main hvr-back-pulse btn-lg">Learn more...</a>
+                                    <a href="{{ organization.donation_url }}" target="_blank" class="btn btn-alternate btn-lg ms-3" id="">Donate!</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
