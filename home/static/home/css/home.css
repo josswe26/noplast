@@ -1,3 +1,18 @@
+/* About section */
+#about {
+    background: url("/media/about-image.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+#about-content {
+    background-color: rgba(0, 30, 61, .6);
+    color: #f4f6fc;
+}
+
+#about-content p {
+    text-align: justify;
+}
+
 /* Categories section */
 #categories-section {
     min-height: calc(100vh - 232px);
@@ -28,7 +43,8 @@
     color: #09abd7;
 }
 
-.guide-item-container p {
+.guide-item-container p,
+#about p {
     font-size: 1.5rem;
 }
 
