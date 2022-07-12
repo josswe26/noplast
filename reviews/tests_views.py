@@ -76,11 +76,13 @@ class TestReviewsViews(TestCase):
                                             content='Test content',
                                             rating=5)
         # Submit form to edit review with altered content
-        response = self.client.post(f'/reviews/edit_review/{test_review.id}/', {
-            'title': test_review.title,
-            'content': 'Edited content',
-            'rating': test_review.rating,
-        })
+        response = self.client.post(
+            f'/reviews/edit_review/{test_review.id}/', {
+             'title': test_review.title,
+             'content': 'Edited content',
+             'rating': test_review.rating,
+            }
+        )
         self.assertRedirects(response, f'/products/{test_review.product.id}/')
         self.assertEqual(Review.objects.last().content, "Edited content")
 
@@ -94,7 +96,8 @@ class TestReviewsViews(TestCase):
                                             rating=5)
         self.assertEqual(len(Review.objects.all()), 1)
         # Submit form to delete review
-        response = self.client.post(f'/reviews/delete_review/{test_review.id}/')
+        response = self.client.post(
+            f'/reviews/delete_review/{test_review.id}/')
         self.assertRedirects(response, f'/products/{test_review.product.id}/')
         self.assertEqual(len(Review.objects.all()), 0)
 

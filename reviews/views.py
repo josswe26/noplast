@@ -78,12 +78,15 @@ def edit_review(request, review_id):
 
             update_product_rating(review.product)
 
-            return redirect(reverse('product_detail', args=[review.product.id]))
+            return redirect(reverse('product_detail',
+                            args=[review.product.id]))
         else:
-            messages.error(request, 'Failed to update your review. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update your review. \
+                Please ensure the form is valid.')
     else:
         form = ReviewForm(instance=review)
-        messages.info(request, f'You are editing your review for {review.product.name}')
+        messages.info(request, f'You are editing your review for \
+            {review.product.name}')
 
     template = 'reviews/edit_review.html'
 
@@ -101,7 +104,8 @@ def delete_review(request, review_id):
     review = get_object_or_404(Review, pk=review_id)
 
     if request.user != review.author:
-        messages.error(request, 'You are not authorized to delete this review.')
+        messages.error(request, 'You are not authorized \
+            to delete this review.')
         return redirect(reverse('product_detail', args=[review.product.id]))
 
     review.delete()

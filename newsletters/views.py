@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
 from django.contrib import messages
@@ -17,7 +16,8 @@ def add_subscriber(request):
         if Subscriber.objects.filter(email=instance.email).exists():
             messages.error(
                 request,
-                f"{instance.email} already exists in our database. Please check your email and try again."
+                f"{instance.email} already exists in our database. \
+                    Please check your email and try again."
             )
             return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
         else:

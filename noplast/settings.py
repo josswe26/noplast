@@ -83,11 +83,14 @@ TEMPLATES = [
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
-                'django.template.context_processors.request', # required by allauth
+                # required by allauth
+                'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.media',
-                'bag.contexts.bag_contents', # makes bag_contents available across all apps
+                # makes bag_contents available across all apps
+                'bag.contexts.bag_contents',
+                # makes subscribe form available across all apps
                 'newsletters.contexts.render_subscribe_form',
             ],
             'builtins': [

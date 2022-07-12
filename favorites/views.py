@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from products.models import Product
 
+
 @login_required
 def show_favorites(request):
     """ A view to show the user's favorite products"""
@@ -13,6 +14,7 @@ def show_favorites(request):
     }
 
     return render(request, 'favorites/favorites.html', context)
+
 
 @login_required
 def add_or_remove_favorite(request, product_id):

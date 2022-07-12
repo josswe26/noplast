@@ -3,6 +3,7 @@ from .models import Organization
 
 # Register your models here.
 
+
 class OrganizationAdmin(admin.ModelAdmin):
     list_display = (
         'name',
@@ -12,5 +13,6 @@ class OrganizationAdmin(admin.ModelAdmin):
     )
 
     ordering = ('name',)
+
 
 admin.site.register(Organization, OrganizationAdmin)

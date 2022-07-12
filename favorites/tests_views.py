@@ -1,7 +1,6 @@
 from django.test import TestCase
 from django.contrib.auth.models import User
 from products.models import Product
-from .views import add_or_remove_favorite
 
 
 # Create your tests here.

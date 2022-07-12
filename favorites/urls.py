@@ -3,5 +3,7 @@ from .import views
 
 urlpatterns = [
     path('', views.show_favorites, name='favorites'),
-    path('add_favorite/<int:product_id>/', views.add_or_remove_favorite, name='add_favorite'),
+    path('add_favorite/<int:product_id>/',
+         views.add_or_remove_favorite,
+         name='add_favorite'),
 ]
