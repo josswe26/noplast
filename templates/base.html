@@ -192,7 +192,15 @@
 
       <div class="col-md-4 px-0 py-4 px-md-4">
         <h5 class="mb-3 text-uppercase">Be a friend!</h5>
-        <p>Join our email list and get inspired about sustainable products and living.</p>
+        <p>Join our newsletter and get inspired about sustainable products and living.</p>
+        <form method="POST" action="{% url 'newsletters' %}" id="newsletter-form" class="text-muted form mb-5"
+          enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ subscribe_form | crispy }}
+          <div class="mt-3">
+              <button class="btn btn-main hvr-back-pulse" type="submit">Subscribe!</button>
+          </div>
+        </form>
       </div>
     </div>
   </footer>

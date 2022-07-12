@@ -192,6 +192,22 @@ input[name='q']::placeholder {
     color: #6c757d;
 }
 
+/* Fotter */
+
+#newsletter-form input {
+    box-sizing: border-box;
+    height: 40px;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-color: #dee2e6;
+    background-color: #055772;
+    color: #f4f6fc;
+}
+
+#newsletter-form input::placeholder {
+    color: #a8aeb3;
+}
+
 /* Page overlay */
 
 .overlay {
