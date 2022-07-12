@@ -174,14 +174,23 @@
             </div>
         </div>
         <div class="row">
-			<div class="col-12 col-lg-7 text-right">
+            <div class="col-12 col-lg-7 text-end">
                 {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-main hvr-back-pulse my-3">
+                    <a href="{% url 'profile' %}" class="btn btn-main hvr-back-pulse my-4">
+                        <span class="me-2">
                             <i class="fas fa-chevron-left"></i>
+                        </span>
                         <span class="text-uppercase">Back to Profile</span>
                     </a>
+                {% else %}
+                    <a href="{% url 'organizations' %}" class="btn btn-main hvr-back-pulse my-4">
+                        <span class="me-2">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </span>
+                        <span class="text-uppercase">Want to help our friends?</span>
+                    </a>
                 {% endif %}
-			</div>
-		</div>
+            </div>
+        </div>
     </div>
 {% endblock %}
