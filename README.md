@@ -256,12 +256,27 @@ GitHub projects was used as my project management tool to track user stories. Us
 
 #### Database Model
 
+The database model has been designed using [drawsql](https://drawsql.app/). The type of database being used for the is relational database being managed using SQLite3 during development and deployed using [PostgreSQL](https://www.postgresql.org/).
+
+![NoPlast Database Model](assets/readme/db-model.png)
+
 
 ### Skeleton
 
 
 #### Wireframes
 
+[Balsamiq](https://balsamiq.com/) has been used to showcase the appearance of the site and display the placement of the different elements whitin the pages.
+
+Page | Desktop Version | Mobile Version
+--- | --- | ---
+Home | ![Desktop home wireframe image](assets/wireframes/home-desktop.png) | ![Mobile home wireframe image](assets/wireframes/home-mobile.png)
+Products | ![Desktop products wireframe image](assets/wireframes/products-desktop.png) | ![Mobile products wireframe image](assets/wireframes/products-mobile.png)
+Product Details | ![Desktop product details wireframe image](assets/wireframes/product-details-desktop.png) | ![Mobile product details wireframe image](assets/wireframes/product-details-mobile.png)
+Shopping Bag (Quick View) | ![Desktop quick shopping bag wireframe image](assets/wireframes/quick-bag-desktop.png) | ![Mobile quick shopping bag wireframe image](assets/wireframes/quick-bag-mobile.png)
+Shopping Bag | ![Desktop shopping bag wireframe image](assets/wireframes/shopping-bag-desktop.png) | ![Mobile shopping bag wireframe image](assets/wireframes/shopping-bag-mobile.png)
+Checkout | ![Desktop checkout wireframe image](assets/wireframes/checkout-desktop.png) | ![Mobile checkout wireframe image](assets/wireframes/checkout-mobile.png)
+Profile | ![Desktop profile wireframe image](assets/wireframes/profile-desktop.png) | ![Mobile profile wireframe image](assets/wireframes/profile-mobile.png)
 
 ### Surface
 
