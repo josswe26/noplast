@@ -34,9 +34,11 @@ Visit the deployed website [here](https://noplast.herokuapp.com/).
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
-    3. [Packages / Dependecies Installed](#packages--dependecies-installed)
+    3. [Packages / Dependencies Installed](#packages--dependencies-installed)
     4. [Database Management](#database-management)
-    5. [Tools and Programs](#tools-and-programs)
+    5. [Payment Service](#payment-service)
+    6. [Cloud Storage](#cloud-storage)
+    7. [Tools and Programs](#tools-and-programs)
 4. [Testing](#testing)
     1. [Go to TESTING.md]()
 5. [Deployment](#deployment)
@@ -320,17 +322,91 @@ After some research on popular ecommerce business fonts. We decided to go with O
 
 ### Languages Used
 
+* [HTML5](https://en.wikipedia.org/wiki/HTML)
+* [CSS3](https://en.wikipedia.org/wiki/CSS)
+* [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+* [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
 
 ### Libraries and Frameworks
 
+* [Django](https://www.djangoproject.com/) was used as web framework.
 
-### Packages / Dependecies Installed
+* [Django Template](https://jinja.palletsprojects.com) was used as a templating language for Django to display backend data to HTML.
+   
+* [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used throughout the website to help with styling and responsiveness.
+
+* [Google Fonts](https://fonts.google.com) was used to import the font into the html file, and were used on all parts of the site.
+
+* [Font Awesome](https://fontawesome.com) was used throughout the website to add icons for aesthetic and UX purposes. 
+
+* [jQuery 3.6.0](https://jquery.com/) was used as a JavaScript library to help writing less JavaScript code. 
+
+
+### Packages / Dependencies Installed
+
+* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/) was used for user authentication, registration, and account management.
+
+* [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/) was used to control the rendering of the forms. 
+
+* [Django Countries](https://pypi.org/project/django-countries/) was used to provide country choices for use with forms and a country field for models.
+
+* [Pillow](https://pypi.org/project/Pillow/) was used to add image processing capabilities.  
+ 
+* [Gunicorn](https://gunicorn.org/) was used as Python WSGI HTTP Server for UNIX to support the deployment of Django application.  
 
 
 ### Database Management
+* [SQLite](https://www.sqlite.com/index.html) was used as a single-file database during development.
 
+* [Heroku Postgres](https://www.heroku.com/postgres) database was used in production, as a service based on PostgreSQL provided by Heroku.
+
+
+### Payment Service
+
+   * [Stripe](https://stripe.com/en-gb-nl) was used to process all online payments transactions.
+
+
+### Cloud Storage
+
+* [Amazon Web Service S3](https://aws.amazon.com/s3/) was used to store all static and media files in production.  
 
 ### Tools and Programs
+
+* [Git](https://git-scm.com)  
+    * Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub. 
+
+* [GitPod](https://gitpod.io/)
+     * GitPod was used for writing code, committing, and then pushing to GitHub.
+
+* [GitHub](https://github.com)  
+   GitHub was used to store the projects code after being pushed from Git. 
+
+* [Heroku](https://www.heroku.com)   
+    * Heroku was used to deploy the website.
+
+* [Tiny PNG](https://tinypng.com)    
+    * Tiny PNG was used to reduce the file size of the images.
+
+* [Coolors](https://coolors.co)  
+    * Coolors was used to create a color scheme for the website.
+
+* [Balsamiq](https://balsamiq.com/)
+     * Balsamiq was used to create the wireframes during the design phase of the project
+
+* [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+    * Chrome DevTools was used during development process for code review and to test responsiveness.
+
+* [W3C Markup Validator](https://validator.w3.org/)
+    * W3C Markup Validator was used to validate the HTML code.
+
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+    * W3C CSS Validator was used to validate the CSS code.
+
+* [JSHint](https://jshint.com/) 
+    * The JSHints JavaScript Code Quality Tool was used to validate the site's JavaScript code.
+
+* [Favicon.io](https://favicon.io) was used to create the site favicon.
 
 
 [Back to top ⇧](#noplast)
