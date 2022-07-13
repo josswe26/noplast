@@ -283,10 +283,24 @@ Profile | ![Desktop profile wireframe image](assets/wireframes/profile-desktop.p
 
 #### Color Scheme
 
-![Color scheme image]()
+![Color scheme image](assets/readme/color-scheme.png)
+
+The colors used in the website are a series of blue tones to represent the stunning ocean colors and this way captivate our shoppers.
+
+We use Oxford Blue (#001F3D) for the main text, main buttons, navbar links and other links, as well as in some dark backgrounds to create color contrast across the website.
+
+For secondary buttons, footer background, as well as for links transitions we use a Blue Sapphire (#055772). As well as to highlight some of the text and titles.
+
+Cerulean Crayola (#09ABD7) is sparingly used, mainly in transitions and to highlight some critical links.
+
+We used Ghost White (#F4F6FC) for the main background and in text located within the dark backgrounds.
 
 
 #### Typography
+
+The font used across the whole site is Oswald. It was used in two different weights.
+
+After some research on popular ecommerce business fonts. We decided to go with Oswald mainly for its simplicity, which makes it easy to read but at the same time being attention-grabbing.
 
 
 [Back to top ⇧](#noplast)
