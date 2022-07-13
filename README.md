@@ -133,7 +133,7 @@ Visit the deployed website [here](https://noplast.herokuapp.com/).
 
 * As a shopper, I want to be able to read product reviews left by other shoppers.
 
-* As a shopper, I want to be able to sort the revies by date or rating.
+* As a shopper, I want to be able to sort the reviews by date or rating.
 
 * As a registered shopper, I want to be able to leave product reviews and rate the products.
 
@@ -146,7 +146,7 @@ Visit the deployed website [here](https://noplast.herokuapp.com/).
 
 **Epic 6 - Product Admin**
 
-* As a site admin, I want to be able to add and update and products.
+* As a site admin, I want to be able to add and update products.
 
 * As a site admin, I want to be able to remove product no longer available.
 
@@ -156,7 +156,7 @@ Visit the deployed website [here](https://noplast.herokuapp.com/).
 
 **Epic 8 - Newsletter Subscription**
 
-As a site admin, I want shoppers to be able to provide their contact information to be able to reach out to them with information and offers.
+* As a site admin, I want shoppers to be able to provide their contact information to be able to reach out to them with information and offers.
 
 
 #### Strategy Table
@@ -658,7 +658,7 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![NoPl
 
 ## Testing
 
-The testing documentation can be found [here]().
+The testing documentation can be found [here](https://github.com/josswe26/noplast/blob/main/TESTING.md#noplast-testing).
 
 
 [Back to top ⇧](#noplast)
