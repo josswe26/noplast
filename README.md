@@ -227,6 +227,29 @@ According to the strategy table, not all features can be implemented in the firs
 
 #### User Stories
 
+GitHub projects was used as my project management tool to track user stories. Using a Kanban board helped to focus on specific tasks and track the project progress.
+
+**Start**
+![User Stories Progress - Start](assets/readme/user-stories-start.png)
+
+**Sprint 1**
+![User Stories Progress - Sprint 1](assets/readme/user-stories-print1.png)
+
+**Sprint 2**
+![User Stories Progress - Sprint 2](assets/readme/user-stories-sprint2.png)
+
+**Sprint 3**
+![User Stories Progress - Sprint 3](assets/readme/user-stories-sprint3.png)
+
+**Sprint 4**
+![User Stories Progress - Sprint 4](assets/readme/user-stories-sprint4.png)
+
+**Sprint 5**
+![User Stories Progress - Sprint 5](assets/readme/user-stories-sprint5.png)
+
+**Sprint 6**
+![User Stories Progress - Sprint 6](assets/readme/user-stories-sprint6.png)
+
 
 ### Structure
 
