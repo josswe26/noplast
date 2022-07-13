@@ -57,8 +57,85 @@ Visit the deployed website [here](https://noplast.herokuapp.com/).
 
 #### Project Goals
 
+* Responsive design to make the website accessible on different screen sizes.
+
+* Structure is easy to understand and navigates effortlessly for an easy shopping experience.
+
+* The website desing and colors are appealing to the customers.
+
+* Customers are offered the opportunity to register an account.
+
+* Easy shopping process to create a pleaseant experince for the customer.
+
 
 #### User Goals
+
+**Epic 1 - Shopping Experience**
+
+* As a shopper, I want to easily find the products and their details.
+
+* As a shopper, I want to view products on a specific category.
+
+* As a shopper, I want to be able to sort the products depending on their price, rating or category.
+
+* As a shopper, I want to be able to search for products using specific keywords.
+
+* As a shopper, I want to easily select the quantity of products to be purchased.
+
+* As a shopper, I want to easily view the current purchase amount.
+
+**Epic 2 - Shopping Bag and Checkout**
+
+* As a shopper, I want to view all items currently on my shopping bag and be able to update them.
+
+* As a shopper, I want to easily provide my shipping and payment information during the checkout.
+
+* As a shopper, I want to feel my personal and payment data is being handled securely.
+
+* As a shopper, I want to receive an order confirmation once I have finished my purchase.
+
+* As a shopper, I want to receive an order confirmation email for my records.
+
+**Epic 3 - User Accounts**
+
+* As a frequent shopper, I want to be able to register an account using my email address to be able to keep my records and interact with the website.
+
+* As a frequent shopper, I want to receive a confirmation once my account has been registered to make sure the information entered was correctly.
+
+* As a registered shopper, I want to easily log in and out from my account.
+
+* As a registered shopper, I want to be able to recover access to my account in case I forget my password.
+
+* As a registered shopper, I want to have a personalized profile page where I can keep my contact information updated and see my past orders.
+
+**Epic 4 - Product Reviews**
+
+* As a shopper, I want to be able to read product reviews left by other shoppers.
+
+* As a shopper, I want to be able to sort the revies by date or rating.
+
+* As a registered shopper, I want to be able to leave product reviews and rate the products.
+
+**Epic 5 - Favorites**
+
+* As a registered shopper, I want to be able to keep a list of my favorite products to purchase again in the future.
+
+* As a registered shopper, I want to be able to easily add and remove favorite products.
+
+
+**Epic 6 - Product Admin**
+
+* As a site admin, I want to be able to add and update and products.
+
+* As a site admin, I want to be able to remove product no longer available.
+
+**Epic 7 - Support Organizations**
+
+* As a site admin, I want to give the users the opportunity to support organizations helping to reduce plastic waste.
+
+**Epic 8 - Newsletter Subscription**
+
+As a site admin, I want shoppers to be able to provide their contact information to be able to reach out to them with information and offers.
 
 
 #### Strategy Table
