@@ -30,8 +30,23 @@ Visit the deployed website [here](https://noplast.herokuapp.com/).
         1. [Color Scheme](#color-scheme)
         2. [Typography](#typography)
 2. [Marketing](#marketing)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
+3. [Features](#features)
+   1. [General](#general)
+   2. [Home Page](#home-page)
+   3. [Products Page](#products-page)
+   4. [Product Details Page](#product-details-page)
+   5. [Products Admin](#products-admin)
+   5. [Shopping Bag Page](#shopping-bag-page)
+   6. [Checkout Page](#checkout-page)
+   7. [Checkout Success Page](#checkout-success-page)
+   8. [Profile Page](#profile-page)
+   9. [Favorites Page](#favorites-page)
+   10. [Reviews Page](#reviews-page)
+   11. [Reviews Admin](#reviews-admin)
+   12. [Organizations Page](#organizations-page)
+   13. [Accounts Pages](#accounts-pages)
+   14. [404 Error Page](#404-error-page)
+4. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
     3. [Packages / Dependencies Installed](#packages--dependencies-installed)
@@ -39,17 +54,17 @@ Visit the deployed website [here](https://noplast.herokuapp.com/).
     5. [Payment Service](#payment-service)
     6. [Cloud Storage](#cloud-storage)
     7. [Tools and Programs](#tools-and-programs)
-4. [Testing](#testing)
+5. [Testing](#testing)
     1. [Go to TESTING.md]()
-5. [Deployment](#deployment)
+6. [Deployment](#deployment)
     1. [How To Use This Project](#how-to-use-this-project)  
     2. [Deployment to Heroku](#deployment-to-heroku)   
     3. [AWS Bucket Creation](#aws-bucket-creation)  
     4. [Connect Django to AWS Bucket](#connect-django-to-aws-bucket)
-6. [Finished Product](#finished-product)
-7. [Credits](#credits)
-8. [Known Bugs](#known-bugs)
-9. [Acknowledgements](#acknowledgements)
+7. [Finished Product](#finished-product)
+8. [Credits](#credits)
+9. [Known Bugs](#known-bugs)
+10. [Acknowledgements](#acknowledgements)
 
 
 ***
@@ -316,6 +331,231 @@ After some research on popular ecommerce business fonts. We decided to go with O
 
 
 ## Features
+
+
+### General
+
+* The website has been designed from a mobile first perspective.
+
+* Responsive design across all device sizes.
+
+
+#### Header
+![NoPlast header image](assets/readme/noplast-header.png)
+
+* The header contains the main logo, navigation links and search product functionality.
+
+* The main logo works as a link to the home page.
+
+* The navigation links allow the shopper access to all sections to facilitate navigation across the website. It also has a hover effect that changes color to provide feedback to the shopper for a better user experience.
+
+* The shopping bag icon changes, reflecting the current status. The current shopping amount is displayed for the shopper.
+
+
+#### Search Bar
+![NoPlast search bar image](assets/readme/noplast-search-bar.png)
+
+* The search bar allows the user to search the website for products using specific keywords.
+
+* The search can is hidden at first for better visuals and can be toggled using the search icon link in case the shopper needs.
+
+
+#### Footer
+![NoPlast footer image](assets/readme/noplast-footer.png)
+
+* The footer contains business information as well as links to our Facebook page and privacy policy.
+
+* A newsletter registration form has been located at the footer allowing the shopper to subscribe across the whole website.
+
+
+### Home Page
+
+
+#### Categories Section
+![NoPlast categories section image](assets/readme/noplast-categories.png)
+
+* Display to the shopper the product categories available, providing a link to each category.
+
+
+#### About Section
+![NoPlast about section image](assets/readme/noplast-about.png)
+
+* Provide relevant information to the shopper looking to learn more about our business.
+
+
+#### Guide Section
+![NoPlast guide section image](assets/readme/noplast-guide.png)
+
+* Provides useful information to the shopper looking to learn more about reducing plastic consumption.
+
+
+### Products Page
+![NoPlast products page image](assets/readme/noplast-products.png)
+
+* Display all the products currently available or filtered on a specific category.
+
+* Display an image of the products as well as their main information such as name, price and rating.
+
+* Display the quantity of products currently being displayed.
+
+* Provides a product navigation bar to allow the shopper to filter products per category.
+
+* A link to the shopper favorite products is available on at the top of the page.
+
+* Provides sorting functionality to sort products by price, rating, name or category.
+
+* A back to the top button is available so the shopper can easily come back to the top of the page.
+
+* Links to edit and remove are available for each product.
+
+
+### Product Details Page
+![NoPlast product details page image](assets/readme/noplast-product-details.png)
+
+* The products navigation bar is present in case the shopper wants to go back to the products.
+
+* Provide a larger image of the product and display its detailed information.
+
+* A favorites icon is available to easily add the product to the shopper's favorite products.
+
+* Allow the user to select the quantity of products to be added to the shopping bag.
+
+* Provide a "Keep Shopping" button to go back to the products.
+
+* An "Add to Bag" button is available to add the desired quantity of the product to the shopping bag.
+
+* A reviews link is available, indicating how many reviews the product has received and to toggle the reviews. 
+
+* All reviews the product has received are being displayed on the reviews section at the bottom of the page.
+
+* Sort functionality allows the shopper to sort the products either by date created or rating.
+
+* A link to leave a review is available at the bottom of the reviews.
+
+* Provide edit and delete link for the logged in shopper's own reviews.
+
+
+### Products Admin
+
+#### Add Product
+![NoPlast add product image](assets/readme/noplast-product-add.png)
+
+* Provide a form for the site admin to be able to add new products to the store.
+
+#### Edit Product
+![NoPlast edit product image](assets/readme/noplast-product-edit.png)
+
+* Provide a prefilled form for the site admin to be able to update products in the store.
+
+
+### Shopping Bag Page
+![NoPlast shopping bag page image](assets/readme/noplast-shopping-bag.png)
+
+* A message alerts the user in case the free delivery threshold has not been reached, displaying the amount left.
+
+* Display all products currently on the shopping bag and their information.
+
+* Allow the user to update the product quantity or remove the product from the shopping bag.
+
+* Display the current total cost including the bag total and delivery costs.
+
+* Provide a "Keep Shopping" button to go back to the products.
+
+* A button to checkout is provided for the shopper to finish the purchase.
+
+
+### Checkout Page
+![NoPlast checkout page image](assets/readme/noplast-checkout.png)
+
+* Provide a checkout form for the shopper to complete the purchase and provide the necessary contact, shipping and payment information.
+
+* Display an order summary listing all the products to be purchased and their total cost including the bag total and delivery costs.
+
+* Provide a link back to the shopping bag in the case the shopper would like to adjust the products in the shopping bag.
+
+* A message is displayed, informing the shopper the amount to be charged on the provided card.
+
+* Descriptive error messages are displayed in case there is any issue with the payment information provided.
+
+* A button is clearly available for the shopper to complete the order.
+
+* Stripe webhook handler is created in the backend to pass the order information in the case the browser crashes once the checkout completion.
+
+
+### Checkout Success Page
+![NoPlast checkout success page image](assets/readme/noplast-checkout-success.png)
+
+* Display the order and shopper information to allow the shopper to confirm that the information provided is correct.
+
+* Additionally, informs the shopper that an email has been sent to the email address provided with the same information.
+
+* A link to the organizations we would like the shoppers to support is provided at the bottom of the page.
+
+
+### Profile Page
+![NoPlast profile page image](assets/readme/noplast-profile.png)
+
+* Provide a form for the registered shopper to update their default information.
+
+* An order history section is present with all registered shopper's past orders information.
+
+
+### Favorites Page
+![NoPlast favorites page image](assets/readme/noplast-favorites.png)
+
+* Display the registered shopper's favorites products and provides a link to each product.
+
+* A remove button is present for the registered shopper to remove the products he no longer wants to keep on the list.
+
+
+### Reviews Page
+![NoPlast reviews page image](assets/readme/noplast-reviews.png)
+
+* Display the reviews the registered shopper has provided and the review's information.
+
+* Provide a link back to the product.
+
+* Links to edit and delete the reviews are present for each review.
+
+
+### Reviews Admin
+
+#### Add Review
+![NoPlast add review page image](assets/readme/noplast-review-add.png)
+
+* Display the product being reviewed.
+
+* Provide a form for the registered shopper to be able to add review to the product.
+
+#### Edit Review
+![NoPlast edit review page image](assets/readme/noplast-review-edit.png)
+
+* Provide a prefilled form for the registered shopper to be able to update their existing reviews.
+
+
+### Organizations Page
+![NoPlast organizations page image](assets/readme/noplast-organizations.png)
+
+* Provide information about organizations working to protect the oceans.
+
+* Links to the organization page and their donations page are provided for each organization.
+
+
+### Accounts Pages
+
+Page | Purpose | Image |
+--- | --- | --- |
+Sign Up | Allow the shopper to sign up an account for the website. | ![NoPlast Sign Up Page](assets/readme/noplast-sign-up.png) |
+Sign In | Allow the registered shopper to sign in with their account. | ![NoPlast Sign In Page](assets/readme/noplast-sign-in.png) |
+Sign Out | Allow the registered shopper to sign out from their account. | ![NoPlast Sign Out Page](assets/readme/noplast-sign-out.png) |
+
+
+### 404 Error Page
+![NoPlast 404 error page image](assets/readme/noplast-404.png)
+
+* Provided information to the shopper in case the address entered cannot be found.
+
+* A link to come back to the products is present.
 
 
 [Back to top ⇧](#noplast)
