@@ -999,6 +999,19 @@ Create a custom_storages.py file in your project's root directory, and inside it
 
 ## Finished Product
 
+Page | Desktop | Mobile |
+--- | --- | --- |
+| Home | ![Desktop Home Page image](assets/readme/desktop-home.png) | ![Mobile Home Page image ](assets/readme/mobile-home.png) |
+| Products | ![Desktop Products Page image](assets/readme/desktop-products.png) | ![Mobile Products Page image ](assets/readme/mobile-products.png) |
+| Product Details | ![Desktop Product Details Page image](assets/readme/desktop-product-detail.png) | ![Mobile Product Details Page image ](assets/readme/mobile-product-detail.png) |
+| Shopping Bag | ![Desktop Shopping Bag Page image](assets/readme/desktop-shopping-bag.png) | ![Mobile Shopping Bag Page image ](assets/readme/mobile-shopping-bag.png) |
+| Checkout | ![Desktop Checkout Page image](assets/readme/desktop-checkout.png) | ![Mobile Checkout Page image ](assets/readme/mobile-checkout.png) |
+| Checkout Success | ![Desktop Checkout Success Page image](assets/readme/desktop-checkout-success.png) | ![Mobile Checkout Page image ](assets/readme/mobile-checkout-success.png) |
+| Profile | ![Desktop Profile Page image](assets/readme/desktop-profile.png) | ![Mobile Profile Page image ](assets/readme/mobile-profile.png) |
+| Reviews | ![Desktop Reviews Page image](assets/readme/desktop-reviews.png) | ![Mobile Reviews Page image ](assets/readme/mobile-reviews.png) |
+| Favorites | ![Desktop Favorites Page image](assets/readme/desktop-favorites.png) | ![Mobile Favorites Page image ](assets/readme/mobile-favorites.png) |
+| Organizations | ![Desktop Organizations Page image](assets/readme/desktop-organizations.png) | ![Mobile Organizations Page image ](assets/readme/mobile-organizations.png) |
+
 
 [Back to top ⇧](#noplast)
 
