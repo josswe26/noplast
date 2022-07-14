@@ -191,3 +191,30 @@ Other errors regarding unused imports were corrected by removing the unnecessary
 ### Javascript
 
 * [JSHint](https://jshint.com/) found a total of 6 warnings concerning missing or unnecessary semicolons. These warnings were corrected.
+
+
+## Accessibility
+
+Lighthouse in Chrome DevTools has been used to confirm that the colors and fonts being used throughout the website are easy to read and accessible. See reports in the table below:
+
+
+### Lighthouse Reports
+
+Page | Lighthouse Report |
+| --- | --- |
+| Home | ![Home Lighthouse Report](assets/testing/lighthouse-home.png) |
+| Products | ![Products Lighthouse Report](assets/testing/lighthouse-products.png) |
+| Product Details | ![Product Details Lighthouse Report](assets/testing/lighthouse-product-details.png) |
+| Add Product | ![Add Product Lighthouse Report](assets/testing/lighthouse-product-add.png) |
+| Edit Product | ![Edit Product Lighthouse Report](assets/testing/lighthouse-product-edit.png) |
+| Shopping Bag !| ![Shopping Bag Lighthouse Report](assets/testing/lighthouse-bag.png) |
+| Checkout | ![Checkout Lighthouse Report](assets/testing/lighthouse-checkout.png) |
+| Checkout Success | ![Checkout Success Lighthouse Report](assets/testing/lighthouse-checkout-success.png) |
+| Profile | ![Profile Lighthouse Report](assets/testing/lighthouse-profile.png) |
+| Favorites | ![Favorites Lighthouse Report](assets/testing/lighthouse-favorites.png) |
+| Reviews | ![Reviews Lighthouse Report](assets/testing/lighthouse-reviews.png) |
+| Add Review | ![Add Review Lighthouse Report](assets/testing/lighthouse-review-add.png) |
+| Edit Review | ![Edit Review Lighthouse Report](assets/testing/lighthouse-review-edit.png) |
+| Organizations | ![Organizations Lighthouse Report](assets/testing/lighthouse-organizations.png) |
+
+The low score on the product admin pages, depends mostly on the aria-labels being suggested for the "Select image" button and the image example.
