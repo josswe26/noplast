@@ -169,3 +169,25 @@
 #### As a site admin, I want shoppers to be able to provide their contact information to be able to reach out to them with information and offers.
 
 * A newsletter subscription form had been added to the website footer, making it available for the shoppers across the whole website.
+
+
+## Code Validation
+
+### HTML
+
+* No errors were returned when passing through the [W3C Markup Validator](https://validator.w3.org/) validator. However, managed to find a stray end tag div in toast_success.html which was fixed.
+
+### CSS
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) found no errors on my CSS files.
+
+### Python
+
+Pylint was used continuously during the development process to analyze the Python code for programming errors.
+
+The code was then checked for errors via the terminal command "python3 -m flake8". This returned a number of whitespace and indentation errors which were rectified where possible. (The unfixed errors were situated in root files such as .vscode/artictern)
+
+Other errors regarding unused imports were corrected by removing the unnecessary files.
+
+### Javascript
+
+* [JSHint](https://jshint.com/) found a total of 6 warnings concerning missing or unnecessary semicolons. These warnings were corrected.
