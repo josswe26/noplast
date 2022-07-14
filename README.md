@@ -274,6 +274,18 @@ GitHub projects was used as my project management tool to track user stories. Us
 
 ### Structure
 
+The website has been organized in a Hierarchical Tree Structure to ensure the site user navigates through the site effortlessly and intuitively. Here you can you can find the website map design.
+
+![NoPlast website map](assets/readme/sitemap.png)
+
+* Header, footer and navigation bar are consistent through all pages.
+
+* Links and forms provide clear feedback to the site user.
+
+* New additional content features are provided for the shopper once they register an account.
+
+* A 404-error page is available.
+
 
 #### Database Model
 
