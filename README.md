@@ -55,7 +55,7 @@ Visit the deployed website [here](https://noplast.herokuapp.com/).
     6. [Cloud Storage](#cloud-storage)
     7. [Tools and Programs](#tools-and-programs)
 5. [Testing](#testing)
-    1. [Go to TESTING.md]()
+    1. [Go to TESTING.md](https://github.com/josswe26/noplast/blob/main/TESTING.md#noplast-testing)
 6. [Deployment](#deployment)
     1. [How To Use This Project](#how-to-use-this-project)  
     2. [Deployment to Heroku](#deployment-to-heroku)   
@@ -664,6 +664,8 @@ Sign Out | Allow the registered shopper to sign out from their account. | ![NoPl
 
 * [Favicon.io](https://favicon.io) was used to create the site favicon.
 
+* [WebAIM](https://webaim.org/resources/contrastchecker/) was used to verify the contrast radio for the color on the website.
+
 
 [Back to top ⇧](#noplast)
 
@@ -1021,19 +1023,72 @@ Page | Desktop | Mobile |
 
 ### Content
 
+* Product Examples were taken from the following websites:
+   * [Amazon](https://www.amazon.com/)
+   * [Life Without Plastic](https://lifewithoutplastic.com/)
+   * [Life Before Plastic](https://www.lifebeforeplastic.co.uk/)
+   * [Boozt](https://www.boozt.com/)
+
+* Content for the organizations page was taken from the following pages:
+   * [Marine Insight](https://www.marineinsight.com/environment/15-brave-organisations-fighting-save-oceans/)
+   * [Parley Foundation](https://www.parleyfoundation.org/)
+   * [The Ocean Cleanup](https://theoceancleanup.com/)
+
+* All other content was written by the developer.
+
 
 ### Media
+
+* [Pexels](https://www.pexels.com/)
+
+   * Home Page background image: Taken by [Laker](https://www.pexels.com/@laker/).
+
+   * About Section background image: Taken by [Buro Millennial](https://www.pexels.com/@buro-millennial-636760/).
+
+   * Facebook post image: Taken by [Marta Ortigosa](https://www.pexels.com/@marta-ortigosa-1877261/)
+
+* The categories images were taken from the following sources:
+
+   * [Household](https://www.lifebeforeplastic.co.uk/collections/natural-candles/products/reed-diffuser-tobacco-oak)
+   * [Kitchen](https://cdn.ecommercedns.uk/files/7/225817/9/3558029/kitchenhomecat.jpg)
+   * [Storage](https://www.pexels.com/photo/glass-jars-with-food-3737648/)
+   * [Wellbeing](https://www.pexels.com/photo/set-of-natural-nonpolluting-toiletries-on-marble-table-4202926/)
+   * [On The Go](https://www.pexels.com/photo/woman-in-black-pants-3738035/)
+   * [Kids & Baby](https://www.lifebeforeplastic.co.uk/collections/plastic-free-kids-baby-products/products/soothing-skin-balm)
 
 
 ### Code
 
+* The code in Code Institute's video on the Boutique Ado project was used as the main reference point to set up an e-commerce / online store project using HTML, CSS, JS, Python+Django, PostgreSQL database, Stripe, and AWS S3 as storage.
+
 
 ## Known Bugs
+
+**Checkout process for unregistered users**
+
+An issue with the checkout process for unregistered users was discovered due to the save_info check box not being present.
+
+This issue was solved by adding a condition to the stripe_elements.js in order to check if the checkbox was present before trying to assign the saveInfo variable.
+
+**Webhook issue during checkout for unregistered users**
+
+Another issue was also discovered with the webhook during checkout for unregistered users. This issue was solved also checking the intent.metadata.save_info existed before assigning the save_info variable.
+
+**Responsiveness in product quantity form on shopping bag**
+
+As stated in the testing section, the appearance of the product quantity form on the shopping bag page can be improved on smaller devices. This issue has not yet been tackled due to time constrains as it does not affect the overall functionality.
 
 
 [Back to top ⇧](#noplast)
 
 ## Acknowledgements
 
+* My partner, for her unconditional love, help and continued support through the whole course. Without you I wouldn't been able to make this happen.
+
+* My friend, Miguel, for being always there to help, no matter what time of the day.
+
+* My tutor, Marcel, for his invaluable support, feedback and guidance through the whole process.
+
+* Code Institute and it's amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
 [Back to top ⇧](#noplast)
