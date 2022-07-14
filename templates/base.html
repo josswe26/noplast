@@ -171,7 +171,7 @@
               {% endif %}
           {% endwith %}
       {% endfor %}
-      </div>
+    </div>
   {% endif %}
 
   {% block page_header %}
@@ -213,7 +213,7 @@
   </footer>
 
 {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     let toastElList = [].slice.call(document.querySelectorAll('.toast'))
     let toastList = toastElList.map(function (toastEl) {
       let option = {
