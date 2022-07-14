@@ -13,6 +13,7 @@
 3. [Accessibility](#accessibility)
 4. [Tools Testing](#tools-testing)
 5. [Manual Testing](#manual-testing)
+6. [Unit Testing](#unit-testing)
 
 ***
 
@@ -218,3 +219,205 @@ Page | Lighthouse Report |
 | Organizations | ![Organizations Lighthouse Report](assets/testing/lighthouse-organizations.png) |
 
 The low score on the product admin pages, depends mostly on the aria-labels being suggested for the "Select image" button and the image example.
+
+## Tools Testing
+
+
+### [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+
+* Chrome DevTools was used during the development process to test, explore and modify HTML elements and CSS styles used in the project.
+
+
+### Responsiveness
+
+* Chrome DevTools was used to test responsiveness in different screen sizes during the development process.
+
+
+## Manual Testing
+
+
+### Browser Compatibility
+
+Browser | Outcome | Pass/Fail | 
+--- | --- | --- |
+Google Chrome | No appearance, responsiveness nor functionality issues. | Pass |
+Safari | No appearance, responsiveness nor functionality issues. | Pass |
+Mozilla Firefox | No responsiveness nor functionality issues. | Pass |
+Microsoft Edge | No appearance, responsiveness nor functionality issues. | Pass |
+
+
+### Device Compatibility
+
+Device | Operative System |Outcome | Pass/Fail
+--- | --- | --- | --- |
+Dell Optiplex 7060 | Windows 11 | No appearance, responsiveness nor functionality issues. | Pass |
+MacBook Pro 15" | macOS Big Sur | No appearance, responsiveness nor functionality issues. | Pass |
+Dell Latitude 5300 | Windows 10 | No appearance, responsiveness nor functionality issues. | Pass |
+iPad Pro 12.9" | iOS 15 | No appearance, responsiveness nor functionality issues. | Pass |
+iPad Pro 10.5" | iOS 15 |No appearance, responsiveness nor functionality issues. | Pass |
+iPhone XR | iOS 15 |No appearance, responsiveness nor functionality issues. | Pass |
+iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | Pass |
+
+**Note**
+
+The appearance of the product quantity form on the shopping bag page can be improved on smaller devices.
+
+### Test Results
+
+#### General
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Main Logo Link | Clicking the link redirects to the home page. | Pass |
+Shop Link | Clicking the link redirects to the products page. | Pass |
+About Link | Clicking the link redirects to about section in the home page. | Pass |
+Support Link | Clicking the link redirects to the organizations page. | Pass |
+My Account Icon - Register Link | Clicking the link redirects to the account sign up page. | Pass |
+My Account Icon - Login Link | Clicking the link redirects to the account sign in page. | Pass |
+My Account Icon - Logout link | Clicking the link redirects to the account sign out page. | Pass |
+My Account Icon - Product Management Link | Clicking the link redirects to the add product page. | Pass |
+My Account Icon - My Profile Link | Clicking the link redirects to the profile page. | Pass |
+My Account Icon - My Reviews Link | Clicking the link redirects to the reviews page. | Pass |
+Shopping Cart Icon | Clicking the link redirects to the shopping cart. | Pass |
+Search Bar | Clicking the link redirects to the products page and display the matching products. | Pass |
+Privacy Policy Link | Clicking the link opens the privacy policy. | Pass |
+Facebook Icon | Clicking the link open the business Facebook page on a separate tab. | Pass |
+Newsletter Form | Email address gets registered to the database when submitting the form. | Pass |
+
+
+#### Home Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Categories Links | Clicking any of the links will redirect to the products page and filter the products on that category. | Pass |
+Down Arrow Link | Clicking the link redirects to about section in the home page. | Pass |
+
+
+#### Products Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Product Navigation Bar Links | Clicking any of the links will filter the products on that category. | Pass |
+Sort By Selector | Sort by functionality sort the products depending on the selection. | Pass |
+Favorites Link | Clicking the link redirects to the favorites page. | Pass |
+Product Image | Clicking the image redirect to the product details page for that specific product. | Pass |
+Product Edit Link | Clicking the link redirects to the edit product page. | Pass |
+Product Delete Link | Clicking the link delete the product from the database. | Pass |
+
+
+#### Product Details Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Product Navigation Bar Links | Clicking any of the links will redirect to the products page and filter the products on that category. | Pass
+Product Image | Clicking the image opens it on a separate tab. | Pass |
+Favorites Icon | Clicking the icon toggle the product on the favorites database. | Pass |
+Product Edit Link | Clicking the link redirects to the edit product page. | Pass |
+Product Delete Link | Clicking the link deletes the product from the database. | Pass |
+Decrease Quantity Button | Decreases the quantity on the input form. | Pass |
+Increase Quantity Button | Increases the quantity on the input form. | Pass |
+Keep Shopping Button | Clicking the button redirects to the products page. | Pass |
+Add To Bag Button | Clicking the button adds the specified quantity of the product to the shopping bag. | Pass |
+Reviews Link | Clicking the link toggle the product reviews. | Pass |
+Sort By Selector | Sort by functionality sort the reviews depending on the selection. | Pass |
+Review Edit Link | Clicking the link redirects to the edit review page. | Pass |
+Review Delete Link | Clicking the link delete the review from the database. | Pass |
+Leave A Review Button | Clicking the button redirects to the add review page. | Pass |
+
+
+#### Add Product Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Select Image Button | Clicking the button allows to add an image to the form | Pass |
+Add Product Form | Product gets registered to the database when submitting the form. | Pass |
+Cancel Button | Clicking the button redirects to the products page. | Pass |
+
+
+#### Edit Product Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Select Image Button | Clicking the button allows to add or replace the image | Pass |
+Edit Product Form | Product gets updated when submitting the form. | Pass |
+Cancel Button | Clicking the button redirects to the products page. | Pass |
+
+
+#### Shopping Bag Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Decrease Quantity Button | Decreases the quantity on the input form. | Pass |
+Increase Quantity Button | Increases the quantity on the input form. | Pass |
+Update Link | Clicking the link update the product quantity on the shopping bag. | Pass
+Delete Link | Clicking the link removed the product from the shopping bag. | Pass
+Keep Shopping Button | Clicking the button redirects to the products page. | Pass |
+Secure Checkout Button | Clicking the button redirects to the checkout page. | Pass |
+
+
+#### Checkout Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Checkout Form | An order gets created when submitted the form. | Pass |
+Login Link | Clicking the link redirects to the account sign in page. | Pass |
+Register Link | Clicking the link redirects to the account sign up page. | Pass |
+Save Information Check | Checking the box update the user's profile information during the checkout process. | Pass |
+Adjust Bag Link | Clicking the link redirects to shopping bag page. | Pass |
+
+
+#### Checkout Success Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Want To Help? Button | Clicking the button redirects to the organizations page. | Pass |
+
+
+#### Profile Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Update Information Form | User's information gets updated when submitting the form. | Pass |
+Order Link | Clicking the link redirects to order view. | Pass |
+
+
+#### Favorites Page
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Remove Link | Clicking the link removes the product from the user's favorites list. | Pass |
+
+
+#### Reviews Page
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Product Link | Clicking the link redirect to the product details page. | Pass |
+Edit Link | Clicking the link redirect to the edit review page. | Pass |
+Delete Link | Clicking the link deletes the review from the database. | Pass |
+
+
+#### Add Review Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Add Review Form | Review gets registered to the database when submitting the form. | Pass |
+Cancel Button | Clicking the button redirects to the product details page. | Pass |
+
+
+#### Edit Review Page
+
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Edit Review Form | Review gets updated when submitting the form. | Pass |
+Cancel Button | Clicking the button redirects to the products page. | Pass |
+
+
+#### Organizations Page
+Element | Expected Outcome | Pass/Fail |
+--- | --- | --- |
+Learn More Button | Clicking the button opens the organization's page on a separate tab. | Pass |
+Donate Button | Clicking the button opens the organization's donation page on a separate tab. | Pass |
+
+
+## Unit Testing
+
+Unit tests were written for views on the favorites and reviews app, practicing test-driven development on those methods.
