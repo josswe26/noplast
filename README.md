@@ -10,7 +10,7 @@ The main purpose of the website is to provide site users with eco-friendly alter
 
 Another goal the website wants to achieve is to create consciousness about plastic pollution and in this way reduce plastic waste. Site users are also given the option to support charities that are fighting to protect our world's oceans from plastic pollution by making a donation. 
 
-Visit the deployed website [here](https://noplast.herokuapp.com/).
+Visit the deployed website [here](https://noplast.onrender.com/).
 
 
 ## Table of Contents
